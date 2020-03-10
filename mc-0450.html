@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0450.css">
+    <!-- 여기에 페이지 css 따로 넣어주세요. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script>
+        $(function() {
+              // 돌아가기
+              $('#header-btn').click(function(e) {
+                e.preventDefault();
+                $('.alert-page').show();
+            })
+            $('#btn-yes').click(function(e) {
+                e.preventDefault();
+                var reserve=getReserve()
+                reserve.pop();
+                setReserve(reserve);
+                location.href="mc-0300.html";
+            })
+            $('#btn-no').click(function(e) {
+                e.preventDefault();
+                $('.alert-page').hide();
+            })
+            $('#btn-next').click(function (e) { 
+                e.preventDefault();
+                location.href="mc-0460.html"
+            });
+            
+            var reserve=getReserve();
+            $('ul').prepend(`
+               <li>
+                  <span>예약방식 : ${reserve[0].callKinds}</span>
+               </li>
+               <li>
+                  <span>예약일자 : ${reserve[6].callDate}</span>
+               </li>
+               <li>
+                  <span>출발지 : ${reserve[9].depaturePlace}</span>
+               </li>
+               <li>
+                  <span>도착지 : ${reserve[10].arrivePlace}</span>
+               </li>
+               <li>
+                  <span>인원 : 아이 ${reserve[7].useChild}, 어른${reserve[7].useAdult}, 카시트${reserve[7].useSafeSeat}</span>
+               </li>
+               <li>
+                  <span>기사님 : ${reserve[8].driverName}/차종:${reserve[8].driverCar}</span>
+               </li>
+               <li>
+                  <span>결제 예상금액 : 30,000</span>
+               </li>
+            `);
+        })
+    </script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <button id="header-btn"><a href="#"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2><span></span><span></span><span></span><span></span><span class="active"></span class="active"><span></span></h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <div class="container">
+            <ul>
+            </ul>
+            <p> 
+                ※ 이용 완료 후 자동 결제 됩니다.
+            </p>
+        </div>
+    </section>
+    <!-- 경고창 버튼식-->
+    <aside class="alert-page">
+    <!-- 내용 넣기 -->
+    <h3>예약을 취소하시겠습니까?</h3>
+    <div class="btn-wrap">
+        <button id="btn-yes">확인</button>
+        <button id="btn-no">취소</button>
+    </div>
+</aside>
+    <!-- footer -->
+    <footer>
+        <a href="mc-0460.html" id="btn-next">
+            <h2>결제정보</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,9 @@
+@charset "UFT-8";
+
+.container{
+    background: #DDDDDD;
+    height: 530px;
+    border-radius: 22px;
+    margin-top: 50px;
+    padding: 10px;
+}

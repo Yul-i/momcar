@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0101.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script>
+        $(function() {
+            // 아이디 찾기
+            $('#btn-find-id').click(function(e) {
+                e.preventDefault();
+                // 아무것도 없을때 입력하라 경고창 주기
+                if ($('input.input-name.find-id').val()=='') {
+                    $('.alert-textpage h3').text('이름을 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-name.find-id').focus();
+                    return false;
+                }
+                else if ($('input.input-phone.find-id').val()=='') {
+                    $('.alert-textpage h3').text('휴대전화 번호를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-phone.find-id').focus();
+                    return false;
+                }
+                else if ($('input.input-certifi.find-id').val()=='') {
+                    $('.alert-textpage h3').text('인증번호를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-certifi.find-id').focus();
+                    return false;
+                }
+                else{
+                    location.href='mc-0102.html';
+                    return true;
+                }
+            });
+            // 비밀번호 찾기
+            $('#btn-find-pw').click(function(e) {
+                e.preventDefault();
+                // 아무것도 없을때 입력하라 경고창 주기
+                if ($('input.input-id.find-pw').val()=='') {
+                    $('.alert-textpage h3').text('아이디를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-id.find-pw').focus();
+                    return false;
+                }
+                else if ($('input.input-phone.find-pw').val()=='') {
+                    $('.alert-textpage h3').text('휴대전화 번호를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-phone.find-pw').focus();
+                    return false;
+                }
+                else if ($('input.input-certifi.find-pw').val()=='') {
+                    $('.alert-textpage h3').text('인증번호를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-certifi.find-pw').focus();
+                    return false;
+                }
+                else{
+                    location.href='mc-0103.html';
+                    return true;
+                }
+            });
+            
+            // 인증번호 발송 버튼 클릭
+            $('.btn-confirm').click(function(e) {
+                e.preventDefault();
+                $('.alert-page').show();
+            })
+        })
+    </script>   
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <button id="header-btn"><a href="mc-0100.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2>아이디/비밀번호 찾기</h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+
+        <div class="container">
+            <span></span><h3>아이디 찾기</h3>
+            <p>
+                회원정보에 등록한 이름과 전화번호가 같아야,<span>인증번호를 받을 수 있습니다.</span>
+            </p>
+            <form action="" id="find-id-form">
+                <table>
+                    <tr>
+                        <th>이름</th>
+                        <td><input type="text" class="input-name find-id"></td>
+                    </tr>
+                    <tr>
+                        <th>휴대전화</th>
+                        <td><input type="text" class="input-phone find-id" placeholder="-를 제외한 번호 입력"></td>
+                    </tr>
+                </table>
+                <button class="btn-confirm">인증번호 발송</button>
+                <table>
+                    <tr>
+                        <th>인증번호</th>
+                        <td><input type="text" class="input-certifi find-id"></td>
+                    </tr>
+                </table>
+                <button type="submit" id="btn-find-id">아이디 찾기</button>
+            </form>
+            <span></span><h3>비밀번호 찾기</h3>
+            <p>
+                회원정보에 등록한 ID와 전화번호가 같아야,
+                <span>인증번호를 받을 수 있습니다.</span>
+            </p>
+            <form action="" id="find-pw-form">
+                <table>
+                    <tr>
+                        <th>아이디</th>
+                        <td><input type="text" class="input-id find-pw"></td>
+                    </tr>
+                    <tr>
+                        <th>휴대전화</th>
+                        <td><input type="text" class="input-phone find-pw"placeholder="-를 제외한 번호 입력"></td>
+                    </tr>
+                </table>
+                <button class="btn-confirm">인증번호 발송</button>
+                <table>
+                    <tr>
+                        <th>인증번호</th>
+                        <td><input type="text" class="input-certifi find-pw"></td>
+                    </tr>
+                </table>
+                <button type="submit" id="btn-find-pw">비밀번호 찾기</button>
+            </form>
+        </div>
+    </section>
+        <!-- 경고창 메세지 -->
+    <aside class="alert-textpage">
+        <h3></h3>
+    </aside>
+    <!-- 경고창 버튼식-->
+    <aside class="alert-page">
+        <!-- 내용 넣기 -->
+        <h3>인증번호를 발송 했습니다.</h3>
+        <div class="btn-wrap">
+            <button id="btn-confirm">닫기</button>
+        </div>
+    </aside>
+</body>
+</html>

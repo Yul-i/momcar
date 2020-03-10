@@ -1,0 +1,33 @@
+header{
+    position: relative;
+    height: 66px; 
+    background: url(../img/header-bg4.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.container{}
+
+.container p{
+    margin: 70px 0 5px 0;
+    font-size: 18px;
+    text-align: left;
+}
+
+.container form input{
+    width: 200px; height: 30px;
+    border: 2px solid #58e3b5;
+}
+
+h2{
+    background: #58e3b5;
+}
+
+.year{
+    display: block;
+    height: 100px;
+}
+
+.cake img{
+    width: 137px; height: 137px;
+}

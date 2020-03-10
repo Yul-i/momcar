@@ -1,0 +1,137 @@
+@charset "UFT-8";
+
+.tab-nav{
+    overflow: hidden;
+    margin-top: 15px;
+    width: 100%;
+}
+.tab-nav li{
+    float: left;
+    width: 33.33%;
+}
+.tab-nav li a{
+    display: block;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #ffffff;
+}
+.tab-nav li:nth-child(1) a{
+    background: #53D2C7;
+    line-height: 24px;
+}
+.tab-nav li:nth-child(1) a span{
+    display: block;
+}
+.tab-nav li:nth-child(2) a{
+    background: #00C6EF;
+}
+.tab-nav li:nth-child(3) a{
+    background: #5095F6;
+}
+.tab-nav li a.active{
+    background: #ffffff;
+    color: #5095F6;
+    border:1px solid #5095F6;
+    border-bottom: none;
+}
+
+.tab-contents>div{
+    display: none;
+}
+.container{
+    text-align: center;
+}
+.container p span{
+    display:block;
+}
+#tab1 .container p:nth-child(2){
+    color: #F26755;
+}
+#tab1 .container div{
+    margin: 20px auto;
+    width: 255px;
+    height: 175px;
+    background: url(../img/empty-card.png) no-repeat;
+    background-size: 100%;
+}
+#tab1 .container div a i{
+    font-size: 5em;
+    color: #d1d1d1;
+    line-height: 180px;
+}
+#tab1 .container small{
+    display: block;
+}
+
+#tab1-2 table th, #tab2 table th{
+    padding: 10px 0;
+    text-align: left;
+}
+#tab1-2 table td{
+    text-align: center;
+}
+#tab1-2 table tr span{
+    vertical-align: sub;
+}
+#tab1-2 table input[type=text], #tab2 table input[type=text]{
+    width: 292px;
+}
+#tab1-2 table tr:nth-of-type(3) td{
+    text-align: left;
+}
+#tab1-2 table td select{
+    border: 2px solid #5095F6;
+    margin: 0 auto 10px;
+    width: 65px; height: 40px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-indent: 10px;
+}
+#tab1-2 table tr:last-of-type td{
+    padding-left: 8px;
+    text-align: left;
+}
+#tab1-2 table tr:last-of-type input[type=text]{
+    width: 50px;
+}
+
+#tab2 button{
+    width: 60px; height: 30px;
+    background: #dddddd;
+    color: #ffffff;
+    box-shadow: 0px 2px 4px 0px #bfbfbf;
+}
+#tab2 button.active{
+    background: #5095F6;
+}
+#tab2 table tr:last-of-type td{
+    text-align: left;
+}
+#tab2 table tr:last-of-type input[type=text]:nth-of-type(1){
+    width:120px;
+}
+#tab2 table tr:last-of-type span:nth-of-type(1){
+    padding: 0 15px;
+}
+#tab2 table tr:last-of-type input[type=text]:nth-of-type(2){
+    width:40px;
+}
+#tab2 table tr:last-of-type span:nth-of-type(2){
+    padding: 0 5px;
+    vertical-align: middle;
+}
+
+#tab3 span{
+    display: block;
+    padding: 10px 10px 20px;
+    text-align: left;
+}
+#tab3 select{
+    border: 2px solid #5095F6;
+    margin: 0 auto 10px;
+    width: 280px; height: 40px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-indent: 10px;
+}

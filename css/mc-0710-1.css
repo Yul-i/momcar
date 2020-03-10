@@ -1,0 +1,174 @@
+header{
+    position: relative;
+    height: 66px; 
+    background: url(../img/header-bg4.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+.top-bg{
+    display: block;
+    width: 100%; height: 160px;
+    margin: -60px auto;
+    background: #f4f4f4;
+    z-index: -3;
+    text-align: center;
+}
+
+.circle-man{
+    width: 70px; height: 70px;
+    border-radius: 70px;
+    background: url(../img/이명박.jpg) center no-repeat;
+    background-size: cover;
+    margin: -80px 0  0 30px;
+    color: #fff;
+}
+
+.top-bg .rocation{
+    display: inline-block;
+    max-width: 300px;
+    margin:20px 0 0 130px
+}
+
+.rocation span{
+    font-size: 14px;
+}
+
+.top-bg p{
+    display: inline-block;
+    margin: 60px 30px 0 0px;
+    font-size: 18px;
+    
+}
+
+.top-bg i{
+    margin-top: -76px;
+    transform: scale(0.40);
+    vertical-align: top;
+}
+
+
+#tab1 img{
+    margin: 50px 10px 0 10px;
+}
+
+#tab1 p{
+    margin: 0px 30px 5px 17px;
+    font-size: 18px;
+    text-align: left;    
+}
+
+
+.helth-check{
+    max-width: 280px;
+    margin: auto;
+}
+.helth-check ul li{
+    float: left;
+    width: 48%;
+    margin-top: 20px;
+
+}
+.helth-check input{
+    width: 70px; height: 30px;
+    border: 2px solid #58e3b5;
+}
+
+.helth-check .line{
+    display: block;
+    width: 265px;
+    height: 1px;
+    background: #525252;
+    margin: auto;
+    transform: translate(0px, 140px);
+}
+
+.center-input{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 155px);
+}
+
+.input-drug{
+    font-size: 20px;
+    color: #585858;
+}
+
+.drug-choice{
+    position: absolute;
+    width: 100%;
+    left: 61%;
+    transform: translate(-50%, 200px);
+}
+
+.drug-choice p{
+    font-size: 18px;
+}
+.drug-choice i{
+    transform: scale(0.5);
+    position: absolute;
+    
+}
+.drug-choice .w-drug{
+    width: 90px;
+    height: 35px;
+    background: #58E4B5;
+    color: #fff;
+}
+.drug-choice .b-drug{
+    width: 90px;
+    height: 35px;
+    background: #DDDDDD;
+}
+.drug-choice .a-drug{
+    width: 90px;
+    height: 35px;
+    background: #DDDDDD;
+}
+.drug-choice span{
+    color: #fff;
+}
+
+
+
+
+.log-select{
+    text-align: center;
+    transform: translate(0px, 370px);
+
+}
+
+.log-select span{
+    font-size: 16px;
+
+}
+
+.bg-btn{
+    display: inline-block;
+    width: 130px; height: 40px;
+    border: 1px solid #58e3b5;
+    background: #58e3b5;
+    color: #fff;
+
+
+
+}
+
+
+.line-btn{
+    display: inline-block;
+    width: 130px; height: 40px;
+    border: 1px solid #58e3b5;
+    color: #58e3b5;
+    margin-left: 20px;
+
+
+
+}
+
+
+footer{
+    text-align: center;
+    background: #58e3b5;
+}

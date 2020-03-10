@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0420.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/handleCounter.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <button id="header-btn"><a href="#"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2><span></span><span class="active"></span><span></span><span></span><span></span><span></span></h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+
+        <div class="container">
+            <table>
+                <colgroup>
+                    <col width="50px">
+                    <col width="250px">
+                </colgroup>
+                <tr>
+                    <th>아이</th>
+                    <td>
+                        <div class="handle-counter" id="handleCounter1">
+                            <button class="counter-minus btn btn-primary">-</button>
+                            <input type="text" value="1" id="usechild">
+                            <button class="counter-plus btn btn-primary">+</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <th>어른</th>
+                    <td>
+                        <div class="handle-counter" id="handleCounter2">
+                            <button class="counter-minus btn btn-primary">-</button>
+                            <input type="text" value="1" id="useadult">
+                            <button class="counter-plus btn btn-primary">+</button>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <label><input type="checkbox">유아용 카시트가 필요해요</label>
+                    </td>
+                </tr>
+                <tr>
+                    <th>선택</th>
+                    <td>
+                        <div class="handle-counter" id="handleCounter3">
+                            <button class="counter-minus btn btn-primary">-</button>
+                            <input type="text" value="0" id="usesafeseat">
+                            <button class="counter-plus btn btn-primary">+</button>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            <small>※만 6세 미만은 의무 장착해야 함<span>(도로교통법 조항 48조의2)</span></small>
+        </div>
+        <script src="js/mc-0420.js"></script>
+    </section>
+        <!-- 경고창 버튼식-->
+    <aside class="alert-page">
+        <!-- 내용 넣기 -->
+        <h3>예약을 취소하시겠습니까?</h3>
+        <div class="btn-wrap">
+            <button id="btn-yes">확인</button>
+            <button id="btn-no">취소</button>
+        </div>
+    </aside>
+    <!-- footer -->
+    <footer>
+        <a href="mc-0430.html" id="btn-next">
+            <h2>차량/기사 선택</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+    
+</body>
+</html>

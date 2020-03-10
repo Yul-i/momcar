@@ -1,0 +1,64 @@
+@charset "UFT-8";
+
+header h2 span{
+  position: inherit;
+  display: inline-block;
+  margin: 0 2px;
+  width: 20px; height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+header h2 span.active{
+  background: #5095F6;
+  border: 1px solid #ffffff;
+}
+
+.container li{
+  list-style: initial;
+  color: #5095F6;
+  margin: 90px 0 18px 0;
+}
+.container li span{
+  color: #616161;
+}
+
+.container div{
+  border: 3px solid #5095F6;
+    box-sizing: border-box;
+    background: #616161;
+    width: 300px;
+    height: 55px;
+    line-height: 50px;
+    text-align: right;
+    padding-right: 40px;
+    color: #fff;
+    font-size: 14px;
+    
+}
+
+input[type=checkbox]{display: none;}
+
+.container i{
+  margin: 82px 0 0 90px;
+  color: #5095F6;
+  transform: scale(1.5);
+}
+.container a{
+  margin: 82px 0 0 12px;
+}
+
+.container label{
+  display: block;
+  text-align: center;
+  margin: 118px 0 0 -30px;
+  font-size: 14px;
+  color: #616161;
+}
+
+.container label span{
+  transform: scale(0.5);
+}
+
+

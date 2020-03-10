@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0000.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script>
+        function window_onload(){
+            setTimeout('go_url()',3000)  // 3초후 go_url() 함수를 호출한다.
+        }
+        function go_url(){
+            location.href="mc-0100.html"  // 페이지 이동
+        }
+    </script>
+</head>  
+<body onload="window_onload()">
+    <section>
+        <div class="container">
+            <h1></h1>
+            <h2></h2>
+            <div>
+                <img src="img/intro-clouds.PNG" alt="구름">
+                <img src="img/intro-hill.PNG" alt="언덕">
+            </div>
+            
+        </div>
+    </section>
+</body>
+
+</html>

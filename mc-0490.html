@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0490.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script>
+        $(function() {
+            $('.tab-nav a').click(function(){
+                // 아이디 선택자를 구해서 변수에 저장
+                var id=$(this).attr('href');
+                // console.log(id);
+                $('.tab-nav a').removeClass('active');//removeClass()로 써도 됨
+                $(this).addClass('active');
+
+                $('.tab-contents>div').hide();
+                $(id).show();
+            })
+            $('#btn-make-card').click(function(e) {
+                e.preventDefault();
+                $('#tab1').hide();
+                $('#tab1-2').show();
+            })
+            $('#btn-save').click(function(e) {
+                e.preventDefault();
+                $('.alert-textpage').show();
+                $('.alert-textpage').delay(250).fadeOut();
+            })
+        })
+    </script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <button id="header-btn"><a href="mc-0300.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2>결제수단 관리</h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <ul class="tab-nav">
+            <li><a href="#tab1" class="active">체크/신용<span>카드</span></a></li>
+            <li><a href="#tab2">휴대전화</a></li>
+            <li><a href="#tab3">간편Pay</a></li>
+        </ul>
+        <div class="tab-contents">
+            <div id="tab1" style="display: none;">
+                <div class="container">
+                    <p>미리 등록해놓은 카드를 이용해 호출 서비스를<span>요청하실 수 있습니다.</span></p>
+                    <p>요금은 서비스 이용 후 자동 결제 됩니다.</p>
+                    <div>
+                        <a href="#tab1-2" id="btn-make-card">
+                            <i class="material-icons">
+                            add_circle_outline
+                            </i>
+                        </a>
+                    </div>
+                    <small>- 신용(체크)카드 : KB, NH채움, 롯데, 비씨, 삼성, 신한, 씨티, 하나(외환), 현대, 카카오뱅크, 케이뱅크 등록 가능합니다.</small>
+                    <small>- 공용 법인 카드 : KB, NH농협, 비씨, 삼성, 신한, 하나 카드 등록 가능합니다.</small>
+                </div>
+            </div>
+            <div id="tab1-2">
+                <div class="container">
+                    <table>
+                        <colgroup>
+                            <col width="100px">
+                            <col width="100px">
+                            <col width="100px">
+                        </colgroup>
+                        <tr>
+                            <th colspan="3">
+                                - 카드번호
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="text" placeholder="카드번호 16자를 입력해주세요.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>- 유효기간</th>
+                            <td>
+                                <span>YY</span>
+                                <select name="" id="">
+                                    <option value="">20</option>
+                                    <option value="">21</option>
+                                    <option value="">22</option>
+                                    <option value="">23</option>
+                                    <option value="">24</option>
+                                    <option value="">25</option>
+                                    <option value="">26</option>
+                                    <option value="">27</option>
+                                    <option value="">28</option>
+                                    <option value="">29</option>
+                                </select> 
+                            </td>
+                            <td>
+                                <span>MM</span>
+                                <select name="" id="">
+                                    <option value="">01</option>
+                                    <option value="">02</option>
+                                    <option value="">03</option>
+                                    <option value="">04</option>
+                                    <option value="">05</option>
+                                    <option value="">06</option>
+                                    <option value="">07</option>
+                                    <option value="">08</option>
+                                    <option value="">09</option>
+                                    <option value="">10</option>
+                                    <option value="">11</option>
+                                    <option value="">12</option>
+                                </select>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">
+                                - 생년월일(6자리)
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="text" placeholder="주민등록번호 앞자리와 동일">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="3">
+                                - 비밀번호(앞 2자리)
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="3">
+                                <input type="text"><span>**</span>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <small>- 신용(체크)카드 : KB, NH채움, 롯데, 비씨, 삼성, 신한, 씨티, 하나(외환), 현대, 카카오뱅크, 케이뱅크 등록 가능합니다.</small>
+                    <small>- 공용 법인 카드 : KB, NH농협, 비씨, 삼성, 신한, 하나 카드 등록 가능합니다.</small>
+                </div>
+            </div>
+            <div id="tab2">
+                <div class="container">
+                    <table>
+                        <colgroup>
+                            <col width="70px">
+                            <col width="70px">
+                            <col width="70px">
+                            <col width="70px">
+                        </colgroup>
+                        <tr>
+                            <th colspan="4">
+                                - 통신사 선택
+                            </th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="active">SKT</button>
+                            </td>
+                            <td>
+                                <button>KT</button>
+                            </td>
+                            <td>
+                                <button>LGT</button>
+                            </td>
+                            <td>
+                                <button>알뜰</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="4">
+                                - 휴대전화 번호
+                            </th>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <input type="text" placeholder="-빼고 입력해주세요.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">- 사용자 이름</th>
+                            <td><button class="active">내국인</button></td>
+                            <td><button>외국인</button></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><input type="text" placeholder="이름을 입력해주세요."></td>
+                        </tr>
+                        <tr>
+                            <th colspan="2">- 주민등록번호</th>
+                            <td colspan="2"><small>앞 7자리를 입력해주세요.</small></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4">
+                                <input type="text" placeholder="******"><span>-</span><input type="text" placeholder="*"><span>******</span>
+                            </td>
+                        </tr>
+                    </table>
+                    <label><input type="checkbox"><small>결제를 위한 개인정보 저장에 동의합니다.</small></label>
+                </div>
+            </div>
+            <div id="tab3" style="display: block;">
+                <div class="container">
+                    <span>- 주 사용 Pay</span>
+                    <select name="" id="">
+                        <option value="">카카오 페이</option>
+                        <option value="">네이버 페이</option>
+                        <option value="">PAYCO(페이코)</option>
+                        <option value="">Zero Pay(제로 페이)</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+    <aside class="alert-textpage">
+        <h3>결제수단이 등록되었습니다.</h3>
+    </aside>
+    <!-- footer -->
+    <footer>
+        <a href="#" id="btn-save">
+            <h2>등록하기</h2>
+        </a>
+    </footer>
+</body>
+</html>

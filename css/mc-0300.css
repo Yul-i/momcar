@@ -1,0 +1,317 @@
+@charset "UFT-8";
+
+/* header */
+header{
+    z-index: 100;
+    position: relative;
+    height: 60px; 
+    background: #5095F6;
+}
+header h2 {
+    margin: auto;
+    padding-top: 50px;
+    width: 250px; height: 38px;
+    transform: scale(0.5);
+    background: url(../img/title-logo-white.png) no-repeat;
+}
+#btn-menu{
+    z-index: 150;
+    position: absolute;
+    left: -40px;
+    top: 17px;
+}
+#btn-menu i{
+    font-size: 2em;
+    color: #ffffff;
+}
+/* nav */
+nav{
+    z-index: 150;
+    position: fixed;
+    width: 300px;
+    right: -300px; top: 0; bottom: 0;
+    background: #616161;
+    transition: right 1s;
+}
+.nav-bg{
+    display: none;
+    z-index: 100;
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.5);
+}
+nav>*{
+    color: #ffffff;
+}
+#btn-user{
+    margin: 20px;
+    float: left;
+}
+#btn-submenu{
+    margin: 20px;
+    float: right;
+}
+.fa-user-circle{
+    font-size: 2.2em;
+}
+.fa-ellipsis-v{
+    font-size: 1.8em;
+}
+
+/* 리스트에 자식이 있을 경우 */
+.has-child, .hasnt-child{clear: both;}
+.has-child{
+    display: block;
+    text-align: center;
+}
+.has-child ul{
+    overflow: hidden;
+    margin: 0 auto 10px;
+    width: 280px; height: 60px;
+    border-radius: 30px;
+    background: #E8C2D5;
+}
+.has-child ul li{
+    float:left;
+}
+.has-child ul li:nth-child(1){
+    width: 50px;
+    padding-top: 10px;
+}
+.has-child ul li:nth-child(1) span{
+    float: right;
+    display: inline-block;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    background: #ffffff;
+}
+.has-child ul li:nth-child(2){
+    width: 90px;
+    text-align: center;
+}
+.has-child ul li:nth-child(2) span{
+    line-height: 60px;
+}
+.has-child ul li:nth-child(3){
+    width: 50px;
+}
+.has-child ul li:nth-child(3) span{
+    margin: -10px -15px;
+    transform: scale(0.6);
+}
+.has-child ul li:nth-child(4){
+    width: 90px;
+    text-align: left;
+}
+.has-child ul li:nth-child(4) span{
+    padding-left: 10px;
+    line-height: 60px;
+}
+.has-child button{
+    margin: 10px 0 30px;
+}
+.has-child button i{font-size: 2em; color: #ffffff;}
+
+/* 리스트에 자식이 없을 경우 */
+.hasnt-child{
+    display: none;
+    text-align: center;
+}
+.hasnt-child a{
+    display: inline-block;
+    width: 270px; height: 140px;
+    margin-bottom: 30px;
+    background: #C2CDE8;
+    border-radius: 15px;
+}
+.hasnt-child a i{
+    padding-right: 10px;
+    color: #ffffff;
+    font-size: 2em;
+}
+.hasnt-child a h2{
+    display: inline-block;
+    line-height: 140px;
+}
+
+/* 호출 관련 메뉴 */
+.call-menu{
+    overflow: hidden;
+    width: 270px;
+    text-align: center;
+    margin: 0 auto 60px;
+}
+.call-menu li{
+    float: left;
+    width: 33.33%;
+}
+.call-menu li a{
+    display: block;
+    color: #ffffff;
+}
+.call-menu li i{
+    display: block;
+    font-size: 2em;
+    color: #ffffff;
+}
+
+/* 하단 메뉴 */
+
+.under-menu{
+    margin-left: 50px;
+}
+.under-menu li{
+    margin-bottom: 20px;
+    list-style-type: initial;
+}
+.under-menu li a{
+    font-size: 16px;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* section */
+.article1{
+    position: relative;
+    width: 100%; height: 180px;
+    background: #f1f1f1;
+    text-align: center;
+}
+.article1::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    width: 100%; height: 25px;
+    border-bottom: 3px dashed #dcdcdc;
+}
+.sp-pin, .sp-hospital-pin{
+    position: relative;
+    transform: scale(0.5);
+}
+.sp-pin{
+    right:70px;
+}
+.sp-pin span, .sp-hospital-pin span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #5095F6;
+    font-size: 18px;
+}
+.sp-pin span{
+    width: 76px;
+    bottom: -26px;
+}
+.call-bar-depature, .call-bar-run{
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    top: 13px;
+    width: 14px; height: 14px;
+    background: #5095F6;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.call-bar-depature{
+    right: 120px;
+}
+.call-bar-run{
+    right: 40px;
+}
+.sp-hospital-pin{
+    left:70px;
+}
+.sp-hospital-pin span:first-child{
+    width: 100px;
+    bottom: -20px;
+}
+.sp-hospital-pin span.arrive-time{
+    display: none;
+    bottom: -44px;
+    color: #f26755;
+}
+.sp-hospital-pin span.arrive-time.active{
+    display:block;
+}
+.call-bar{
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: 260px; height: 3px;
+    background: #e0e0e0;
+}
+.call-bar span{
+    position: absolute;
+}
+.call-bar .call-bar-active{
+    left: 0; top: 0;
+    width: 100px; height: 3px;
+    background: #5095F6;
+}
+.article1 ul{
+    overflow: hidden;
+    width: 300px;
+    margin: 46px auto 0;
+}
+.article1 ul li{
+    float: left;
+    margin: 0 auto;
+    width: 60px;
+    font-size: 12px;
+    color: #585858;
+}
+.article1 ul li span{
+    display: block;
+    margin: 0 auto 4px;
+    width: 30px; height: 12px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.article1 ul li span.active{
+    background: #5095F6;
+}
+
+/* article2 */
+
+.article2{}
+.article2 ul{
+    width: 100%;
+    overflow: hidden;
+}
+.article2 ul li{
+    width: 100%;
+}
+.article2 ul li:nth-child(1){
+    background: #5095F6;
+}
+.article2 ul li:nth-child(2){
+    background: #59e4b5;
+}
+.article2 ul li:nth-child(3){
+    background: #f98484;
+}
+.article2 ul li:nth-child(4){
+    background: #89bbe5;
+}
+.article2 ul li a{
+    display: block;
+    height: 120px;
+}
+.article2 ul li:nth-child(1) a{
+    background: url(../img/menu1.png) no-repeat center;
+    background-size: contain;
+}
+.article2 ul li:nth-child(2) a{
+    background: url(../img/menu2.png) no-repeat center;
+    background-size: contain;
+}
+.article2 ul li:nth-child(3) a{
+    background: url(../img/menu3.png) no-repeat center;
+    background-size: contain;
+}
+.article2 ul li:nth-child(4) a{
+    background: url(../img/menu4.png) no-repeat center;
+    background-size: contain;
+}

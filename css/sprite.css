@@ -1,0 +1,142 @@
+li{list-style: none;}
+a{text-decoration: none;}
+p{display: inline-block;}
+
+
+/* sprite-icon */
+
+/* sns */
+
+.sp{
+    background: url(../img/momcar-sprit.svg) no-repeat;
+}
+
+.sp-kakao-log{
+    width: 50px; height: 50px; background-position: 0 0;}
+
+.sp-facebook{
+    width: 50px; height: 50px; background-position: -150px 0;}
+
+.sp-insta{
+    width: 50px; height: 50px; background-position: -250px 0;}
+
+.sp-kakao{
+    width: 50px; height: 50px; background-position: -300px 0;}
+
+.sp-share{
+    width: 50px; height: 50px; background-position: -350px 0;}
+
+.sp-more{
+    width: 50px; height: 50px; background-position: -400px 0;}     
+
+/* check-icon */
+
+.sp-Square{
+    width: 50px; height: 50px; background-position: 0 -50px;}     
+
+.sp-Square-checked{
+    width: 50px; height: 50px; background-position: -50px -50px;}
+
+.sp-Square-radio{
+    width: 50px; height: 50px; background-position: -100px -50px;}     
+
+.sp-circle-checked{
+    width: 50px; height: 50px; background-position: -150px -50px;}     
+            
+.sp-circle{
+    width: 50px; height: 50px; background-position: -200px -50px;}     
+
+.sp-circle-plus{
+    width: 50px; height: 50px; background-position: -250px -50px;}     
+    
+.sp-circle-minus{
+    width: 50px; height: 50px; background-position: -300px -50px;}     
+
+/* element */
+
+.sp-band{
+    width: 80px; height: 80px; background-position: 0 -100px;}
+
+.sp-thermometer{
+    width: 80px; height: 80px; background-position: -80px -100px;}
+
+.sp-siren{
+    width: 80px; height: 80px; background-position: -160px -100px;}
+
+.sp-bandage{
+    width: 80px; height: 80px; background-position: -240px -100px;}
+
+.sp-rule{
+    width: 80px; height: 80px; background-position: -320px -100px;}
+
+.sp-weighing{
+    width: 80px; height: 80px; background-position: -400px -100px;}
+
+.sp-emergency{
+    width: 80px; height: 80px; background-position: -480px -100px;}
+
+.sp-drug{
+    width: 80px; height: 80px; background-position: -0px -180px;}
+
+.sp-making{
+    width: 80px; height: 80px; background-position: -80px -180px;}
+
+.sp-red-poison{
+    width: 80px; height: 80px; background-position: -160px -180px;}
+
+.sp-blue-poison{
+    width: 80px; height: 80px; background-position: -240px -180px;}
+    
+.sp-male{
+    width: 80px; height: 80px; background-position: -320px -180px;}  
+
+.sp-famale{
+    width: 80px; height: 80px; background-position: -400px -180px;}  
+
+.sp-pin{
+    width: 80px; height: 80px; background-position: -480px -180px;}  
+
+.sp-hospital-pin{
+    width: 80px; height: 80px; background-position: -560px -180px;}  
+
+.sp-baby{
+    width: 80px; height: 80px; background-position: -0px -260px;}
+
+.sp-board{
+    width: 80px; height: 80px; background-position: -80px -260px;}
+
+.sp-pink-heart{
+    width: 80px; height: 80px; background-position: -160px -260px;}
+
+.sp-cross{
+    width: 80px; height: 80px; background-position: -240px -260px;}
+    
+.sp-latter{
+    width: 80px; height: 80px; background-position: -320px -260px;}  
+
+.sp-ball{
+    width: 80px; height: 80px; background-position: -400px -260px;}  
+
+.sp-signal{
+    width: 80px; height: 80px; background-position: -480px -260px;}  
+
+.sp-red-heart{
+    width: 80px; height: 80px; background-position: -560px -260px;}  
+
+.sp-live{
+    width: 50px; height: 50px; background-position: 0px -340px;}
+    
+.sp-live-hover{
+    width: 50px; height: 50px; background-position: -50px -340px;}  
+
+.sp-progress-ball{
+    width: 50px; height: 50px; background-position: -100px -340px;}  
+
+.sp-square-cross{
+    width: 50px; height: 50px; background-position: -150px -340px;}  
+
+.sp-circle-cross{
+    width: 50px; height: 50px; background-position: -200px -340px;}  
+
+
+       

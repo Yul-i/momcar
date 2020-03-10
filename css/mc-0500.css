@@ -1,0 +1,88 @@
+@charset "UFT-8";
+header{
+    background: url(../img/header-bg2.png) no-repeat;
+    background-size: 100% 100%;
+}
+section{
+    height: 1475px;
+}
+
+/* .jum1 */
+section .container>span:first-child{
+    margin-top: 53px;
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background: #FA8484;
+    vertical-align: top;
+}
+/* .container ul li */
+.container>p
+{
+    display: inline-block;
+    font-size: 16px;
+    color: #616161;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 53px 0 0 10px;
+}
+/* .container ul li span.line */
+.container p span.line{
+    padding: 0 5px;
+    color: #fff;
+    background: #FA8484;
+}
+/* .container ul li span:nth-child(2) */
+.container p span:nth-child(2){
+    display: block;
+}
+
+
+/* section .container li div span:first-child */
+.jum{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background: #FA8484;
+    vertical-align: baseline;
+    margin-top: 40px;
+}
+
+/* .container li div:first-child */
+.container li div:nth-child(3){
+    background: #FA8484;
+    padding-left: 25px;
+}
+.container li div:nth-child(4){
+    background: #FFE59D;
+    padding-left: 25px;
+}
+
+.container li p{
+    display: inline-block;
+    font-size: 16px;
+    color: #616161;
+    font-weight: 400;
+    line-height: 23px;
+    margin: 40px 0 20px 10px;
+}
+.container li div span{
+    color: #9B9A9A;
+    padding: 0 5px;
+    background: #fff;
+    margin: 10px 10px 0 0;
+    display: inline-block;
+}
+
+.container li div h2{
+    text-align: left;
+    padding: 0;
+    line-height: 40px;
+}
+
+.container li div small{
+    display: inline-block;
+    margin-bottom: 10px;
+}

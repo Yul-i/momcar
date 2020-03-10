@@ -1,0 +1,142 @@
+@charset "UFT-8";
+
+section div ul{
+  height: 866px;
+}
+
+header h2 span{
+  position: inherit;
+  display: inline-block;
+  margin: 0 2px;
+  width: 20px; height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+header h2 span.active{
+  background: #5095F6;
+  border: 1px solid #ffffff;
+}
+
+
+/*  시작------------------------------------------------------------*/
+.img-box{
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.img-box img{
+  max-width: 70px;
+}
+
+
+.row{
+  width: 300px;
+  margin: 50px auto 20px;
+}
+.left{
+  float: left;
+  margin-right: 17px;
+  
+}
+.left span{
+  font-size: 8px;
+  color: #fff;
+  font-style: normal;
+  font-weight: normal;
+  background: #3784D5;
+  border: 2px solid #C1C1C1;
+  box-sizing: border-box;
+  width: 71px;
+  height: 15px;
+  line-height: 11px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.right{
+  position: relative;
+  /* float: right; */
+}
+.right img{
+  max-height: 20px;
+}
+.right h4{
+  font-size: 18px;
+}
+.right h4 span{
+  color: #616161;
+}
+.badge span{
+  font-size: 8px;
+  line-height: 16px;
+  color: #FFFFFF;
+  background: #3784D5;
+  width: 52px;
+  height: 17px;
+  border-radius: 8px;
+  display: inline-block;
+  text-align: center;
+  margin: 10px 0;
+}
+label{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+label span{
+  transform: scale(0.4);
+  transform-origin: right top;
+}
+
+/* 끝============================================================== */
+/* border:1px dashed #3784d5 */
+
+
+/* .container label{
+  display: block;
+  margin: -104px 0px 50px 148px;
+  font-size: 14px;
+  color: #616161;
+} */
+
+input[type=radio]{display: none;}
+input[type=radio]:checked+span{background-position: -150px -50px;}
+
+.location{
+  border-top:1px dashed #3784d5;
+  border-bottom: 1px dashed #3784d5;
+}
+.location dl{
+  padding: 6px 30px 7px 33px;
+}
+.location dt{
+  font-weight: bold;
+  font-size: 14px;
+  color: #DDDDDD;
+}
+.address{
+  font-weight: 500;
+  font-size: 14px;
+  color: #616161;
+}
+
+.km{
+  font-weight: bold;
+  font-size: 14px;
+  color: #616161;
+  /* 이렇게 해도 되나여? */
+  float: right;
+  margin: -30px 0 0 0;
+}
+
+
+
+
+
+
+

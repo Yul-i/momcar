@@ -1,0 +1,30 @@
+@charset "UFT-8";
+
+section{}
+section h1{
+    margin-top: 40px;
+    margin-left: -20px;
+    width: 208px; height: 32px;
+    transform: scale(0.8);
+    background-image: url(../img/title-logo.png);
+}
+section .center>span{
+    display: inline-block;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+section .center p{
+    color: #000000;}
+section .center p span{display: block;}
+section img{
+    position: fixed;
+    bottom: 59px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+section form{
+    position: fixed;
+    bottom: 90px;
+}

@@ -1,0 +1,71 @@
+@charset "UFT-8";
+p{background: transparent;}
+
+#header-btn {
+    position: absolute;
+    left: 20px;
+    top: 20px;
+    z-index: 1;
+}
+.main-text-bg{
+    position: absolute;
+    top: 0;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    background: url(../img/baby1.jpg) center no-repeat;
+    background-size: cover;
+}
+.main-text-bg span{
+    display: inline-block;
+    margin-top: 50%;
+    font-size: 28px;
+    color: #ffffff;
+}
+.main-text-bg p{
+    height: 100%;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.48);
+    line-height: 32px;
+}
+.bottom-bg{
+    max-width: 768px;
+    margin: auto;
+    background: #515151d1;
+    height: 190px;
+    z-index: -1;
+    transform: translate(0, -191px);
+    line-height: 25px;
+}
+
+.bottom-bg li{
+    float: left;
+    text-align: left;
+    margin-top: 60px ;
+    color: #fff;
+}
+
+.bottom-bg li:nth-of-type(2){
+    display: block;
+}
+.bottom-bg .circle-man{
+    width: 70px; height: 70px;
+    border-radius: 70px;
+    background: url(../img/이명박.jpg) center no-repeat;
+    background-size: cover;
+    margin: 0px 20px 10px 50px;
+    color: #fff;
+}
+.bottom-bg p{
+    display: inline-block;
+    background: none;
+    width: 50px;
+    font-size: 20px;
+
+}
+
+.bottom-bg i{
+    display: inline-block;
+    width: 30px;
+    vertical-align: sub;
+}

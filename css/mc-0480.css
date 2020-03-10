@@ -1,0 +1,94 @@
+@charset "UFT-8";
+
+
+*{margin: 0; padding: 0;}
+li{list-style: none;}
+a{text-decoration: none; color:#000;}
+body{max-width: 500px; margin: auto;}
+
+.accordion{
+   border: 1px solid #fff;
+   margin: 20px auto 0;
+}
+.accordion li{
+   border-bottom:1px solid #fff;
+}
+.accordion li:last-child{
+   border-bottom:0;
+}
+.accordion li a{
+   position: relative;
+    display: block;
+    background: #5095F6;
+    width: 270px;
+    height: 112px;
+    margin: auto;
+    padding: 30px 10px 30px 30px;
+}
+.accordion li a i{
+
+   /* position: absolute;
+   left: 80.28%;
+   right: 10.83%;
+   top: 80.47%;
+   bottom: 14.53%;
+
+   background: #FFFFFF; */
+
+
+   position: absolute;
+   right:10px;
+   top:50%; 
+   transform: translateY(-50%);
+   font-size: 2em;
+   
+   /* transition: 0.5s; */
+}
+/* .accordion li a::before{
+   content: 'Q';
+   position: absolute;
+   left:10px;
+   color:salmon;
+   font-weight: bold;
+} */
+.accordion li.active a::before{
+   color:#fff;
+}
+.accordion li.active a{
+   background: #5095F6;
+   color:#fff;
+}
+.accordion li .box{
+   width: 270px;
+   display: none;
+   padding: 0 10px 30px 30px;
+   font-size: 14px;
+   color: #fff;
+   background: #5095F6;
+}    
+
+.container>p{
+   text-align: center;
+   padding: 18px 0 0;
+}
+
+.accordion li a span{
+   color: #fff;
+   font-size: 16px;
+}
+.accordion li a{
+   color: #fff;
+   font-size: 14px;
+   position: relative;
+   display: block;
+   background: #5095F6;
+   width: 270px;
+   height: 112px;
+   margin: auto;
+   padding: 30px 10px 0 30px;
+
+}
+
+
+
+

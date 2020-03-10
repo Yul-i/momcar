@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0820.css">
+    <!-- 여기에 페이지 css 따로 넣어주세요. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <button id="header-btn"><a href="mc-0910.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2>앱 알람 설정하기</h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <div class="container">
+            <table>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="onoff1">
+                        <label for="onoff1" class="onoff">
+                           <span class="on"></span>
+                           <span class="off"></span>
+                           <span class="btn"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <h3>호출 서비스 안내 팝업</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="onoff2">
+                        <label for="onoff2" class="onoff">
+                           <span class="on"></span>
+                           <span class="off"></span>
+                           <span class="btn"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <h3>결제 정보 수신 팝업</h3>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="onoff3">
+                        <label for="onoff3" class="onoff">
+                        <span class="on"></span>
+                        <span class="off"></span>
+                        <span class="btn"></span>
+                        </label>
+                    </td>
+                    <td>
+                        <h3>광고성 게시글 팝업</h3>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section> 
+</body>
+</html>

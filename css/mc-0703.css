@@ -1,0 +1,150 @@
+@charset "UFT-8";
+
+header{
+  z-index: 100;
+  position: relative;
+  height: 66px; 
+  background: url(../img/header-bg4.png) no-repeat;
+  background-size: 100% 100%;
+}
+footer{
+  background: #58E4B5;
+}
+/* 프로필 수정 */
+.profile-photo{
+  text-align: center;
+}
+#holder{
+  margin:10px auto;
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #dddddd;
+}
+#holder img{
+  width: 100%;
+}
+#kid-name{
+  margin: 10px 20px;
+  width: 260px; height: 36px;
+  border: 2px solid #58E4B5;
+}
+table th{
+  padding-top: 10px;
+  text-align: left;
+  text-indent: 20px;
+}
+table th:last-of-type{
+  padding: 10px 0;
+}
+table td{
+  text-align: center;
+}
+label{
+  transform: scale(0.8);
+}
+label span{
+  position: relative;
+  right: 51px; top: 33px;
+  transform: scale(0.4);
+  transform-origin: right top;
+}
+input[type=radio]{
+  display: none;
+}
+
+/* 생년월일 */
+
+.drum-viewport {
+  cursor: pointer;
+  font-family: sans-serif;
+  }
+
+  .drum-item {
+  padding: 0.4em;
+  }
+
+  .drum {
+  margin: 30px;
+  }
+  .example {
+  position: relative;
+  display: inline-block;
+  }
+
+  .example::before,
+  .example::after {
+  content: "";
+  position: absolute;
+  top: 20px;
+  width: 0.5rem;
+  height: 1px;
+  background: #58E4B5;
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: 7px 100%;
+  box-shadow: 0 1px 2px hsla(0, 0%, 0%, .7);
+  }
+
+  .example::before {
+  background-image: linear-gradient(to right, hsla(0, 0%, 0%, .7), hsla(0, 0%, 0%, 0));
+  }
+
+  .example::after {
+  background-position-x: 100%;
+  background-image: linear-gradient(to left, hsla(0, 0%, 0%, .7), hsla(0, 0%, 0%, 0));
+  }
+
+  .example::before {
+  left: 0;
+  }
+
+  .example::after {
+  right: 18px;
+  }
+
+  .example .drum-viewport {
+  margin: 0;
+  padding: 0 5px;
+  height: 2.4em;
+  font-size: 1rem;
+  position: relative;
+  box-shadow: inset 1px 0 7px hsla(0, 0%, 0%, .7);
+  }
+
+  .example .drum-viewport:focus {
+  outline: none;
+  box-shadow: inset 1px 0 7px hsla(0, 0%, 0%, .7),
+      0 0 7px 1px hsl(42, 100%, 40%);
+  }
+
+  .example .drum-viewport::before,
+  .example .drum-viewport::after {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  right: 0;
+  height: 0.2em;
+  background: hsla(0, 0%, 0%, .8);
+  box-shadow: 1px 2px 7px hsla(0, 0%, 0%, .7);
+  }
+
+  .example .drum-viewport::before {
+  top: 0;
+  border-bottom: 1px solid hsla(0, 0%, 0%, .5);
+  }
+
+  .example .drum-viewport::after {
+  bottom: 0;
+  border-top: 1px solid hsla(0, 0%, 100%, .6);
+  }
+
+  .example .drum-item {
+  background: transparent;
+  color: #58E4B5;
+  text-align: center;
+  font-weight: bold;
+  padding-top: .6em;
+  }

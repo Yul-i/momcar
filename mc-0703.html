@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0703.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/jquery.drum.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script src="js/mc-0703.js"></script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+    <script>
+    $(function() {
+        $('input[type=radio]').change(function() {
+            if ($('input[type=radio]').is(':checked')==true) {  
+                console.log('체크 되었다.');
+                $(this).next('span.sp').removeClass('sp-circle');
+                $(this).next('span.sp').addClass('sp-circle-checked');
+
+            }else{
+                $(this).next('span.sp').removeClass('sp-circle-checked');
+                $(this).next('span.sp').addClass('sp-circle');
+            }
+        });
+    }); 
+</script>
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <button id="header-btn"><a href="mc-0300.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2>아이 프로필 수정</h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <div class="container">
+            <div class="profile-photo">
+                <p id="status"></p>
+                <div id="holder"></div>
+                <p><input type=file></p>
+              </div>
+            
+            
+            
+            <!-- <div class="example">
+                <select class="time-drum">
+                    <option>AM</option>
+                    <option>PM</option>
+                </select>
+            </div> -->
+            <form action="submit" id="join-form">
+                <table>
+                    <colgroup>
+                        <col width="100">
+                        <col width="100">
+                        <col width="100">
+                    </colgroup>
+                    <tr>
+                        <th colspan="3">아이 이름</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3">
+                            <input type="text" id="kid-name">
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>성별</th>
+                        <td colspan="2">
+                            <label class="sp sp-male" id="check-agree">
+                                <input type="radio" name="check-agree">
+                                <span class="sp sp-circle"></span>
+                            </label>
+                            <label class="sp sp-famale" id="check-agree">
+                                <input type="radio" name="check-agree">
+                                <span class="sp sp-circle"></span>
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <th colspan="3">생년월일</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="example">
+                                <div class="year-drum"></div>
+                                <span>년</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="example">
+                                <div class="month-drum"></div>
+                                <span>월</span>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="example">
+                                <div class="day-drum"></div>
+                                <span>일</span>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>   
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <a href="mc-0710.html">
+            <h2>수정완료</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+    
+</body>
+</html>

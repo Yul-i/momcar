@@ -1,0 +1,82 @@
+@charset "UFT-8";
+
+body{background: #5095F6;}
+h2 {
+    margin: 40px auto 0;
+    width: 250px; height: 38px;
+    transform: scale(0.8);
+    background: url(../img/title-logo-white.png) no-repeat;
+}
+.dom{
+    margin: 20px auto 0;
+    width: 300px; height: 300px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.dom h3{
+    line-height: 180px;
+    text-align: center;
+    color: #585858;
+    font-size: 24px;
+    font-weight: 400;
+}
+.container{
+    margin-top: -150px;
+    height: 380px;
+    background: #ffffff;
+    text-align: center;
+}
+#login-form{
+    text-align: center;
+}
+#login-form label{
+    margin-right: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color:#9B9A9A; 
+}
+#login-form label span{
+    transform: scale(0.4);
+}
+input[type=text], input[type=password]{ 
+    width: 260px;
+}
+input[type=password]{
+    margin-bottom:20px;
+}
+input[type=checkbox]{
+    
+}
+button{
+    width: 260px; height: 40px;
+    font-weight: 500;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#btn-login{
+    margin: 20px 0 5px;
+    border: 2px solid #5095F6;
+    color: #5095F6;
+}
+.container>button{
+    margin-bottom: 5px;
+}
+#btn-find-id{
+    background: #5095F6;
+    color: #ffffff;
+}
+#btn-login-kakao{
+    position: relative;
+    margin-bottom: 20px;
+    background: #F7E600;
+    color: #000000;
+}
+#btn-login-kakao span{
+    position: absolute;
+    transform: scale(0.65);
+    top: -6px;
+    left: 20px;
+}
+#btn-join{
+    background: #5095F6;
+    color: #ffffff;
+}

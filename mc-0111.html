@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0111.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=198fcddf75edbfee85464866b8ad0a9e&libraries=services"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script>
+         $(function() {
+            // 라디오 버튼
+            $('input[name=check-agree]').change(function() {
+                if ($(this).is(':checked')==true) {  
+                    $(this).next().removeClass('sp-circle');
+                    $(this).next().addClass('sp-circle-checked');
+                }else{
+                    $(this).next().removeClass('sp-circle-checked');
+                    $(this).next().addClass('sp-circle');
+                }
+            });
+
+             // 회원정보 입력
+             $('#btn-next').click(function(e) {
+                e.preventDefault();
+                // 아무것도 없을때 입력하라 경고창 주기
+                if ($('input.input-name').val()=='') {
+                    $('.alert-textpage h3').text('이름을 입력 해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-name').focus();
+                    return false;
+                }
+                else if ($('input.input-age').val()=='') {
+                    $('.alert-textpage h3').text('나이를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-age').focus();
+                    return false;
+                }
+                else if ($('input.address-search').val()=='') {
+                    $('.alert-textpage h3').text('주소를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.address-search').focus();
+                    return false;
+                }
+                else if ($('input.input-phone').val()=='') {
+                    $('.alert-textpage h3').text('휴대전화 번호를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-phone').focus();
+                    return false;
+                }
+                else if ($('input.input-confirm').val()=='') {
+                    $('.alert-textpage h3').text('인증번호를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.input-confirm').focus();
+                    return false;
+                }
+                else if ($('input#text-email').val()=='') {
+                    $('.alert-textpage h3').text('이메일 주소를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input#text-email').focus();
+                    return false;
+                }
+               else{
+                    location.href='mc-0112.html';
+                    return true;
+                }
+                
+            });
+
+            // 인증번호 확인
+            $('.btn-confirm').click(function (e) { 
+                e.preventDefault();
+                $('.alert-page').show();
+            });
+        })
+    </script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <button id="header-btn"><a href="mc-0110.html"><i class="fas fa-chevron-left"></i></a></button>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <h2></h2>
+        <div class="dom">
+            <h3>회 원 가 입</h3>
+        </div>
+        <div>
+            <div class="container">
+                <form action="submit" id="join-form">
+                    <table>
+                        <tr>
+                            <th>이름</th>
+                            <td><input type="text" class="input-name"></td>
+                        </tr>
+                        <tr>
+                            <th>나이</th>
+                            <td><input type="text" class="input-age"></td>
+                        </tr>
+                        <tr>
+                            <th>성별</th>
+                            <td>
+                                <label class="sp sp-male"><input type="radio" name="check-agree" checked="checked"><span class="sp sp-circle-checked"></span></label>
+                                <label class="sp sp-famale"><input type="radio" name="check-agree"><span class="sp sp-circle"></span></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>주소</th>
+                            <td>
+                                <input type="text" id="address-search" placeholder="읍/면/동을 입력해주세요." onkeyup="keyEvent(this);" autocomplete="off">
+                                <ul id="address-list">
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th>휴대전화</th>
+                            <td><input type="text" class="input-phone" placeholder="-를 제외한 숫자 입력"></td>
+                        </tr>
+                    </table>
+                    <button type="button" class="btn-confirm">인증번호 발송</button>
+                    <table>
+                        <tr>
+                            <th>인증번호</th>
+                            <td><input type="text" class="input-confirm"></td>
+                        </tr>
+                        <tr>
+                            <th>이메일</th>
+                            <td><input type="text" id="text-email" placeholder="ex)abc123@momcar.com"></td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </section>
+    <!-- 경고창 메세지 -->
+    <aside class="alert-textpage">
+        <h3></h3>
+    </aside>
+    <!-- 경고창 버튼식-->
+    <aside class="alert-page">
+        <!-- 내용 넣기 -->
+        <h3>인증번호를 발송 했습니다.</h3>
+        <div class="btn-wrap">
+            <button id="btn-confirm">닫기</button>
+        </div>
+    </aside>
+    <!-- footer -->
+    <footer>
+        <a href="#" id="btn-next">
+            <h2>가입 하기</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+</body>
+
+</html>

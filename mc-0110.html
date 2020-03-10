@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0110.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script>
+        $(function() {
+            // 회원정보 입력
+            $('#btn-next').click(function(e) {
+                e.preventDefault();
+                // 아무것도 없을때 입력하라 경고창 주기
+                if ($('input.id-text').val()=='') {
+                    $('.alert-textpage h3').text('아이디를 입력 해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.id-text').focus();
+                    return false;
+                }
+                else if ($('input.pw-text').val()=='') {
+                    $('.alert-textpage h3').text('비밀번호를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.pw-text').focus();
+                    return false;
+                }
+                else if ($('input.rpw-text').val()=='') {
+                    $('.alert-textpage h3').text('비밀번호를 확인해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.rpw-text').focus();
+                    return false;
+                }
+                else{
+                    if(!$('#btn-id-confirm').hasClass('active')){
+                        $('.alert-textpage h3').text('아이디 중복확인을 해주세요.')
+                        $('.alert-textpage').show();
+                        $('.alert-textpage').delay(250).fadeOut();
+                        $('input.id-text').focus();
+                        return false;
+                    }else if ($('input.pw-text').val()!=$('input.rpw-text').val()){
+                    $('.alert-textpage h3').text('비밀번호가 틀립니다.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.rpw-text').focus();
+                    return false;
+                    }else{
+                    location.href='mc-0111.html';
+                    return true;
+                    }
+                }
+            });
+            
+            // 아이디 중복 확인
+            $('#btn-id-confirm').click(function (e) { 
+                e.preventDefault();
+                $(this).addClass('active');
+                $('.alert-page').show();
+            });
+
+        })
+    </script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <button id="header-btn"><a href="mc-0100.html"><i class="fas fa-chevron-left"></i></a></button>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <h2></h2>
+        <div class="dom">
+            <h3>회 원 가 입</h3>
+        </div>
+        <div class="container">
+            <form action="submit" id="join-form">
+                <input type="text" class="id-text" placeholder="아이디">
+                <button id="btn-id-confirm">ID 중복 확인</button>
+                <input type="password" class="pw-text" placeholder="비밀번호">
+                <input type="password" class="rpw-text" placeholder="비밀번호 확인">
+                <button id="btn-terms" type="button" onclick="location.href='mc-0113.html'";>이용 약관 보기</button>
+            </form>
+        </div>
+    </section>
+    <!-- 경고창 메세지 -->
+    <aside class="alert-textpage">
+        <h3></h3>
+    </aside>
+    <!-- 경고창 버튼식-->
+    <aside class="alert-page">
+        <!-- 내용 넣기 -->
+        <h3>사용 가능한 아이디 입니다.</h3>
+        <div class="btn-wrap">
+            <button id="btn-confirm">닫기</button>
+        </div>
+    </aside>
+    <!-- footer -->
+    <footer>
+        <a href="#" id="btn-next">
+            <h2>추가정보 입력</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+</body>
+
+</html>

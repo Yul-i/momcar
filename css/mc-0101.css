@@ -1,0 +1,45 @@
+@charset "UFT-8";
+
+.container>span{
+    display: inline-block;
+    margin-right: 10px;
+    width: 16px; height: 16px;
+    background: #5095F6;
+    border-radius: 50%;
+}
+.container h3{
+    display: inline-block;
+}
+p{
+    padding-left: 25px;
+    color: #9B9A9A;
+    font-size: 14px;
+}
+p>span{
+    display: block;
+}
+input[type=text]{
+    height: 36px;
+}
+table th{width: 100px;}
+table td{width: 200px;}
+
+button.btn-confirm{
+    margin-right: 3px;
+    width: 100px; height: 30px;
+    background: #5095F6;
+    color: #ffffff;
+}
+form{
+    margin: 10px 0 40px;
+    text-align: right;
+}
+form table:nth-child(3){
+    margin-top: 10px;
+}
+form table:nth-child(3)+button{
+    width: 300px;
+    height: 40px;
+    background: #5095F6;
+    color: #ffffff;
+}

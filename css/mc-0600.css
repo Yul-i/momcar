@@ -1,0 +1,28 @@
+@charset "UFT-8";
+
+header{
+    background: url(../img/header-bg3.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+section {
+    margin-top: -13px;
+}
+
+.health-info{
+    text-align: center;
+}
+
+.health-info h3{
+
+    background: url(../img/goYeul1.jpg) center no-repeat;
+    background-size: cover;
+    line-height: 240px;
+    font-size: 36px;
+    
+}
+
+.health-info h3 a{
+    display: block;
+    color: #fff;
+}

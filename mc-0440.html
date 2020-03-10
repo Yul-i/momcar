@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0440.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=198fcddf75edbfee85464866b8ad0a9e&libraries=services"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script>
+        $(function() {
+            $('#header-btn').click(function(e) {
+                e.preventDefault();
+                $('.alert-page').show();
+            })
+            $('#btn-yes').click(function(e) {
+                e.preventDefault();
+                var reserve=getReserve()
+                reserve.pop();
+                setReserve(reserve);
+                location.href="mc-0300.html";
+            })
+            $('#btn-no').click(function(e) {
+                e.preventDefault();
+                $('.alert-page').hide();
+            })
+            $('#btn-next').click(function (e) { 
+                e.preventDefault();
+                var depature=$('#address-search').val();
+                var arrive=$('#address-depature-search').val();
+                var reserve=getReserve()
+                for(var i=0; i<reserve.length; i++){
+                    if(i==reserve.length-1){
+                        reserve[i].depaturePlace=depature;
+                        reserve[i].arrivePlace=arrive;
+                        reserve[i].writhTime=date();
+                    }
+                }
+                setReserve(reserve);
+                location.href="mc-0450.html"
+            }); 
+        })
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <button id="header-btn"><a href="#"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2><span></span><span></span><span></span><span class="active"></span><span></span><span></span></h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <div id="map" style="width:100%;height:350px;"></div>
+        <!-- 지도api불러오기 -->
+        <script src="js/mc-0440.js"></script>
+        
+        <div class="container">
+            <table>
+                <colgroup>
+                    <col width="10px"> 
+                    <col width="60px">
+                    <col width="230px">
+                </colgroup>
+                <tr>
+                    <td>
+                        <span class="bigdot"></span>
+                    </td>
+                    <th>출발지</th>
+                    <td>
+                        <input type="text" id="address-search" placeholder="출발지를 입력해주세요" onkeyup="keyEvent(this);" autocomplete="off">
+                        
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="smalldot"></span>
+                        <span class="smalldot"></span>
+                    </td>
+                    <td colspan="2">
+                        <ul id="address-list">
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <span class="bigdot"></span>
+                    </td>
+                    <th>도착지</th>
+                    <td><input type="text" id="address-depature-search" placeholder="도착지를 입력해주세요" onkeyup="keyEvent2(this);" autocomplete="off"></td>
+                </tr>
+                <tr>
+                    <td>
+                    </td>
+                    <td colspan="2">
+                        <ul id="address-depature-list">
+                        </ul>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </section>
+     <!-- 경고창 버튼식-->
+     <aside class="alert-page">
+        <!-- 내용 넣기 -->
+        <h3>예약을 취소하시겠습니까?</h3>
+        <div class="btn-wrap">
+            <button id="btn-yes">확인</button>
+            <button id="btn-no">취소</button>
+        </div>
+    </aside>
+    <!-- footer -->
+    <footer>
+        <a href="#" id="btn-next">
+            <h2>결제정보</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+    
+</body>
+</html>

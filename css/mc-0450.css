@@ -1,0 +1,39 @@
+@charset "UFT-8";
+
+header h2 span{
+    position: inherit;
+    display: inline-block;
+    margin: 0 2px;
+    width: 20px; height: 4px;
+    background: #ffffff;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+header h2 span.active{
+    background: #5095F6;
+    border: 1px solid #ffffff;
+}
+
+.container ul{
+  margin-top: 100px;
+  line-height: 20px;
+  margin-left: 20px;
+}
+
+.container ul li{
+  padding: 0 0 14px 0;
+  list-style: initial;
+  color:  #5095F6;
+}
+.container ul li span{
+  color: #616161;
+}
+
+
+
+.container p{
+  text-align: center;
+  padding-top: 126px;
+
+}

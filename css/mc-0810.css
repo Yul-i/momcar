@@ -1,0 +1,28 @@
+@charset "UFT-8";
+
+
+select{
+   padding-left: 16px;
+   border: 2px solid #5095f6;
+   box-sizing: border-box;
+   border-radius: 6px;
+   width: 300px;
+   height: 40px;
+   margin-bottom: 4px;
+}
+textarea{
+   width: 300px;
+   height: 210px;
+   padding: 10px 0;
+}
+.container a{
+   margin: 50px 0 10px 172px;
+   display: inline-block;
+}
+
+.container button{
+   width: 300px;
+   height: 46px;
+   background: #DDDDDD;
+   color: #fff;
+}

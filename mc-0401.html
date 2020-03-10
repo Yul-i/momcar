@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0401.css">
+    <!-- 여기에 페이지 css 따로 넣어주세요. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+    <script>
+        $(function() {
+            $('#check-agree').change(function() {
+                if ($('#check-agree').is(':checked')==true) {  
+                    $(this).prev().find('span.sp').removeClass('sp-circle');
+                    $(this).prev().find('span.sp').addClass('sp-circle-checked');
+                }else{
+                    $(this).prev().find('span.sp').removeClass('sp-circle-checked');
+                    $(this).prev().find('span.sp').addClass('sp-circle');
+                }
+            })
+
+            // 다음 넘어가면서 변수에 저장
+            $('#btn-next').click(function (e) { 
+                e.preventDefault();
+                var callKind=$('input[name="check-agree"]:checked').data('kind');
+                console.log(callKind);
+                var reserve=getReserve()
+                if(reserve==null){
+                    reserve=[];
+                }
+
+                var carCall={};
+                
+                carCall.callKinds=callKind;
+                reserve.push(carCall);
+                
+                console.log(reserve);
+                setReserve(reserve);
+                // 다음 페이지 이동
+                if (callKind=="nowCall") {//바로 예약
+                    location.href="mc-0420.html";
+                }else{//호출 예약
+                    location.href="mc-0410.html";
+                }
+            });
+
+            //돌아가기 버튼 누르면 저장소 삭제
+            $('#header-btn').click(function() {
+                var reserve=getReserve();
+                reserve.pop();
+                setReserve(reserve);
+            })
+        })
+    </script>
+</head>
+<body>
+    <!-- header -->
+    <header>
+        <button id="header-btn"><a href="mc-0300.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2><span class="active"></span class='active'><span></span><span></span><span></span><span></span><span></span></h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <div class="point">
+            <p><span>원하는</span><br>예약방식을 선택하세요.</p>
+            <div>
+                <div class="reservation">
+                    <div class="img-wrap">
+                        <img src="img/call.png" alt="">
+                    </div>
+                    <h4>바로호출</h4>
+                    <p>고객님과 가장 가까운<br>
+                        위치에 있는 맘카드라이버 를<br>
+                        호출합니다.
+                    </p>
+                    <label>
+                        <input type="radio" name="check-agree" data-kind="nowcall">
+                        <span class="sp sp-circle"></span>
+                    </label>
+
+                </div>
+            </div>
+            <div>
+                <div class="nowcall">
+                    <div class="img-wrap">
+                        <img src="img/month.png" alt="">
+                    </div>
+                    <h4>예약<br>
+                        호출서비스</h4>
+                    <p>고객님과 가장 가까운<br>
+                        위치에 있는 맘카드라이버 를<br>
+                        호출합니다.
+                    </p>
+                    <label>
+                        <input type="radio" name="check-agree" data-kind="reservation-call">
+                        <span class="sp sp-circle"></span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- footer -->
+    <footer>
+        <a href="#" id="btn-next">
+            <h2>이용하기</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+</body>
+</html>

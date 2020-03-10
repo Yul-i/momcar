@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0300.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+    <script>
+        $(function() {
+            // nav버튼
+            $('#btn-menu').click(function (e) { 
+                e.preventDefault();
+                $(this).find('i').toggleClass('fa-bars fa-times');
+                if($(this).find('i').hasClass('fa-times')==true){
+                    $('nav').css('right',0);
+                    $('.nav-bg').show();
+                }else{
+                    $('nav').css('right',-300);
+                    $('.nav-bg').hide();
+                }
+            });
+
+            // 로그아웃 버튼
+            $('#btn-logout').click(function (e) { 
+                e.preventDefault();
+                $('.alert-page').show();
+            });
+            $('#btn-yes').click(function (e) { 
+                e.preventDefault();
+                location.href='mc-0100.html';
+            });
+        })
+    </script>
+</head>
+<body>
+     <!-- header -->
+     <header>
+
+        <h2></h2>
+    </header>
+    
+    <!-- nav -->
+    <nav>
+        <button id="btn-menu"><i class="fas fa-bars"></i></button>
+        <button id="btn-submenu" onclick="location.href='mc-0910.html'";><i class="fas fa-ellipsis-v"></i></button>
+        <div class="has-child">
+            <ul data-index="0" onclick="location.href='mc-0710.html'";>
+                <li><span></span></li>
+                <li><span>김나리</span></li>
+                <li><span class="sp sp-famale"><span class="blind">여아</span></span></li>
+                <li><span>첫째아이</span></li>
+            </ul>
+            <ul data-index="1">
+                <li><span></span></li>
+                <li><span>김달래</span></li>
+                <li><span class="sp sp-male"><span class="blind">남아</span></span></li>
+                <li><span>둘째아이</span></li>
+            </ul>
+            <button onclick="location.href='mc-0700.html'";><i class="fas fa-plus-circle"></i></button>
+        </div>
+        <div class="hasnt-child">
+            <a href="#">
+                <i class="fas fa-plus-circle"></i>
+                <h2>아이정보를 등록해주세요.</h2>
+            </a>
+        </div>
+        <ul class="call-menu">
+            <li><a href="mc-0470.html"><i class="fas fa-car-side"></i>호출진행상황</a></li>
+            <li><a href="mc-0480.html"><i class="far fa-list-alt"></i>이용내역</a></li>
+            <li><a href="mc-0460.html"><i class="fas fa-coins"></i>결제관리</a></li>
+        </ul>
+        <ul class="under-menu">
+            <li><a href="mc-0200.html">서비스 가이드</a></li>
+            <li><a href="mc-0800(1).html">공지사항</a></li>
+            <li><a href="mc-0810.html">문의하기</a></li>
+            <li id="btn-logout"><a href="mc-0100.html">로그아웃</a></li>
+        </ul>
+    </nav>
+    <div class="nav-bg"></div>
+
+    <!-- 본문 -->
+    <section>
+        <article class="article1">
+            <span class="sp sp-pin">
+                <span>이동현황</span>
+            </span>
+            <span class="call-bar-depature"></span>
+            <span class="call-bar-run"></span>
+            <span class="sp sp-hospital-pin">
+                <span>도착예정시간</span>
+                <span class="arrive-time">PM20:25</span><!-- 시간 지우기! 양식(PM00:00) -->
+            </span>
+            <div class="call-bar">
+                <span class="call-bar-active"></span>
+            </div>
+            <ul>
+                <li><span></span>출발준비</li>
+                <li><span></span>이동중</li>
+                <li><span></span>탑승</li>
+                <li><span></span>병원이동중</li>
+                <li><span></span>도착</li>
+            </ul>
+        </article>
+        <article class="article2">
+            <ul>
+                <li><a href="mc-0400.html"><span class="blind">호출서비스</span></a></li>
+                <li><a href="mc-0700.html"><span class="blind">아이건강관리</span></a></li>
+                <li><a href="mc-0500.html"><span class="blind">응급의료시설</span></a></li>
+                <li><a href="mc-0600.html"><span class="blind">건강소식</span></a></li>
+            </ul>
+        </article>
+    </section>
+    <!-- 경고창 버튼식-->
+    <aside class="alert-page">
+        <!-- 내용 넣기 -->
+        <h3>로그아웃 하시겠습니까?</h3>
+        <div class="btn-wrap">
+            <button id="btn-yes">확인</button>
+            <button id="btn-no">취소</button>
+        </div>
+    </aside>
+</body>
+</html>

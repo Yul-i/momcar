@@ -1,0 +1,90 @@
+@charset "UFT-8";
+
+
+section h2 {
+    margin: 40px auto 0;
+    width: 250px; height: 38px;
+    transform: scale(0.8);
+    background: url(../img/title-logo-white.png) no-repeat;
+}
+.dom{
+    margin: 20px auto 0;
+    width: 100%; height: 100px;
+    background: url(../img/join-dom.png) no-repeat;
+    background-size: 100% 100%;
+}
+.dom h3{
+    line-height: 130px;
+    text-align: center;
+    color: #585858;
+    font-size: 24px;
+    font-weight: 400;
+}
+.dom+div{
+    background: #ffffff;
+}
+.container{
+    padding: 10px 0 40px;
+    background: #ffffff;
+    text-align: center;
+    margin: 60px auto 0;
+}
+
+table th{
+    width: 80px;
+    text-align: left;
+    padding-left: 8px;
+    font-size: 18px;
+    color: #585858;
+}
+table td{
+    width: 200px;
+}
+table+button{
+    float: right;
+    margin-right: 20px;
+    width: 100px; height: 30px;
+    background: #5095F6;
+    color: #ffffff;
+}
+input[type=radio]{display: none;}
+.sp-male, .sp-famale{
+    transform: scale(0.7);
+}
+.sp-male{
+    margin-right: 20px;
+}
+input[type=radio]+span{
+    margin-left: -100px;
+    margin-top: 20px;
+    transform: scale(0.8);
+} 
+table input[type=text],
+table input[type=password]{
+    width: 200px;
+    height: 36px;
+}
+#text-email{
+    margin-top: 10px;
+}
+select{
+    margin: 0 auto 10px;
+    width: 95px; height: 40px;
+    border: 2px solid #5095F6;
+    border-radius: 6px;
+    box-sizing: border-box;
+    color: #5095F6;;
+}
+select:nth-of-type(1){
+    float: left;
+}
+select:nth-of-type(2){
+    float: right;
+}
+
+.container form a{
+    float: right;
+    padding: 16px 8px 0 0;
+    color: red;
+}
+

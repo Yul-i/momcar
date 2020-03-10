@@ -1,0 +1,27 @@
+
+/*
+
+  INSTRUCTIONS ---------------------------------------------------------------------------------
+  
+  1. Add this stylesheet to the <head> of your pages
+     <link href="YOUR PATH/mamcar.css" rel="stylesheet" type="text/css" />
+     
+  2. Use the file name as data-dd-theme attribute on your datedropper elements
+     <input data-dd-theme="mamcar" />
+     
+*/
+
+
+div.datedropper.momcar-date{
+
+  --dd-color1: #5096f6;
+  --dd-color2: #FFF;
+  --dd-color3: #585858;
+  --dd-color4: #FFF;
+
+  --dd-radius: 5px;
+  --dd-width: 140px;
+  --dd-shadow: 0 0 42px 3px rgba(0, 0, 0, 0.13);
+
+}
+

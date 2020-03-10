@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+   <script src="momcar.js"></script>
+</head>
+<body>
+   이름 <span class="name"></span>
+   나이 <span class="age"></span>
+   <button>내정보수정</button>
+   <script>
+      var jsonMyInfo=localStorage.getItem('myInfo');
+      var myInfo=JSON.parse(jsonMyInfo);
+      $('.name').text(myInfo.name);
+      $('.age').text(myInfo.age);
+      $('button').click(function (e) { 
+         e.preventDefault();
+         location.href="정보등록.html";
+      });
+   </script>
+</body>
+</html>

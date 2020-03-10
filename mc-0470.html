@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0470.css">
+
+    <!-- 여기에 페이지 css 따로 넣어주세요. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <button id="header-btn"><a href="mc-0300.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2>호출 진행사항</h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <ul>
+            <li>
+                <div class="row">
+                    <div class="left">
+                        <div class="img-box"><img src="img/profile5.jpg" alt=""></div>
+                        <span>BEST DRIVER</span>
+                    </div>
+                    <div class="right">
+                        <img src="img/title-logo.png" alt="">
+                        <h4>Driver<span>최수진</span></h4>
+                        <div class="badge">
+                            <span>3년 이상</span>
+                            <span>CRP/EFR</span>
+                            <span>SUV</span>
+                        </div>
+                        <!-- <label>
+                            <input type="radio" name="check-agree">
+                            <span class="sp sp-circle"></span>
+                        </label> -->
+                    </div>
+                </div>
+                <div class="location"> 
+                    <dl>
+                        <span class="circle"></span>
+                        <dt>위치상세정보</dt>
+                        <dd class="address">탑승인원 : 아이1명 / 어른1명  ㅣ 카시트 : YES</dd>
+                        <span class="circle"></span>
+                        <dt>바로호출</dt>
+                        <dd class="address">호출 : 2019년 10월 20일(화)ㅣ일시 : PM 13:43</dd>
+                    </dl>
+                </div>
+                <div class="bluebox container">
+                    <div class="bluebox-left">
+                        <p>
+                            출발지
+                        </p>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span></span>
+                        <small>
+                            서울시 강남구 봉은사로 18길 20 
+                        </small>
+                    </div>
+                    <div class="bluebox-right">
+                        <p>
+                            도착지
+                        </p>
+                        <i class="fas fa-plus-square"></i>
+                        <span></span>
+                        <small>
+                            서울시 마포구 신촌동 더조은 5F 
+                        </small>
+                    </div>
+                    <div class="running-jum">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="blackbox container">
+                    <table>
+                        <tr>
+                            <th>결제방식</th>
+                            <td>신용카드</td>
+                        </tr>
+                        <tr>
+                            <th>이용요금</th>
+                            <td>30,000￦</td>
+                        </tr>
+                    </table>
+                    
+                </div>
+            </li>
+        </ul>
+    </section>
+    
+</body>
+</html>

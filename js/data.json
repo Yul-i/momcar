@@ -1,0 +1,12 @@
+[
+    {
+        "writingTime" : "2019.09.25 PM 13:00",
+        "reserveTime":"2019.10.22 PM 13:30",
+        "dapature" : "마포구 노고산동 57-2",
+        "arrive" : "신촌세브란스 병원 주차장",
+        "runningTime" : "13:00~16:00",
+        "driver" : "최수진",
+        "carInfo" : "26저 1888 6인승 SUV",
+        "serviceFee" : 30600
+    }
+]

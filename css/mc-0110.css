@@ -1,0 +1,55 @@
+@charset "UFT-8";
+
+body{background: #5095F6;}
+header {
+    height: 30px;
+    background: none;
+}
+#header-btn {
+    top: 30px;
+}
+section h2 {
+    margin: 40px auto 0;
+    width: 250px; height: 38px;
+    transform: scale(0.8);
+    background: url(../img/title-logo-white.png) no-repeat;
+}
+.dom{
+    margin: 20px auto 0;
+    width: 300px; height: 300px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.dom h3{
+    line-height: 180px;
+    text-align: center;
+    color: #585858;
+    font-size: 24px;
+    font-weight: 400;
+}
+.container{
+    margin-top: -150px;
+    height: 380px;
+    background: #ffffff;
+    text-align: center;
+}
+.container button{
+    margin-right: 3px;
+    width: 100px; height: 30px;
+    background: #5095F6;
+    color: #ffffff;
+}
+#btn-id-confirm{
+    float: right;
+    margin-right: 22px;
+}
+#join-form{
+    text-align: center;
+}
+input[type=text], input[type=password]{ 
+    width: 260px;
+}
+input[type=password].pw-text{margin-top: 10px;}
+input[type=password]{
+    margin-bottom:10px;
+}

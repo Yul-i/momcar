@@ -1,0 +1,25 @@
+@charset "UFT-8";
+
+section>div{
+    background: #DDDDDD;
+    margin-top: -12px;
+    width: 100%;
+}
+span{
+    width: 300px;
+    margin: auto;
+    display: block;
+    height: 100px;
+    line-height: 45px;
+   
+}
+
+div span:first-child{
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+span p{
+    width: 300px;
+    margin: 0 auto;
+}

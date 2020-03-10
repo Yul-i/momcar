@@ -1,0 +1,61 @@
+@charset "UFT-8";
+
+/* 초기화 */
+*{margin:0; padding: 0;}
+/* thin:100, light:300, regular:400, medium:500, bold:700, black:900 */
+body{font-family: 'Noto Sans KR', sans-serif; background: #ffffff;}
+li{list-style: none;}
+a{text-decoration: none; color: #000000;}
+button{border: none; outline: none; background: none; cursor: pointer;}
+.blind{position: absolute; left: -9999px; font-size: 0;}
+.container{max-width: 300px; margin: 40px auto 0; position: relative;}
+
+/* header, 하단버튼 글씨 색 */
+h2{
+    font-size: 18px; 
+    color: #ffffff; 
+    font-weight: 400; 
+    text-align: center;
+    line-height: 60px;
+}
+/* 본문 안 페이지 제목 */
+h3{font-size: 24px; color: #585858; font-weight: 400;}
+/* 본문 강조 글씨(퍼렁이) */
+h4{font-size: 24px; color: #5095F6; font-weight: 400;}
+/* 본문 안 페이지 글 */
+p{font-size: 14px; color: #616161; font-weight: 400;}
+/* 참고사항, 주의사항 */
+small{font-size:12px; color:#9B9A9A; font-weight: 300;}
+
+/* 폼 */
+
+input[type=text],input[type=password],textarea{
+    border: 2px solid #5095F6;
+    margin: 0 auto 10px;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-indent: 10px;
+}
+button{
+    display: inline-block;
+    box-sizing: border-box;
+}
+
+/* 테이블 */
+table th{
+    font-size: 16px;
+    color: #585858;
+    font-weight: 500;
+}
+
+/* span 동그리 */
+
+span.circle{
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background: #FA8484;
+    vertical-align: top;
+}

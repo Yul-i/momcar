@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0910.css">
+    <!-- 여기에 페이지 css 따로 넣어주세요. -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
+    <script>
+        $(function(){
+           // 두번째 방법 - 클래스 값 변경하기(아이콘 모양이 다를경우)
+           $('.accordion a').click(function(){
+              if($(this).parent().hasClass('active')){
+                 $('.accordion li').removeClass(); 
+              }else{
+                 $('.accordion li').removeClass(); 
+                 $(this).parent().addClass('active');
+              }
+           })
+        })
+    </script>
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <button id="header-btn"><a href="mc-0300.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2>기타 메뉴</h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <ul class="accordion">
+        <li>
+           <a href="mc-0820.html">앱 알람 설정하기<i class="fas fa-angle-down"></i></a>
+        </li>
+        <li>
+           <a href="mc-0822.html">회원정보 수정<i class="fas fa-angle-down"></i></a>
+        </li>
+        <li>
+           <a href="mc-0830.html">약관 확인<i class="fas fa-angle-down"></i></a>
+        </li>
+        <li>
+            <a href="mc-0840.html">버전 정보<i class="fas fa-angle-down"></i></a>
+        </li>
+     </ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+@charset "UFT-8";
+
+.container p:first-child{
+   font-size: 18px;
+   width: 155px;
+   height: 56px;
+   margin: 30px auto;
+   color: #9B9A9A;
+}
+section i{
+   transform: scale(10.5);
+   color: #dddd;
+   margin: 140px;
+}
+
+.container p:nth-child(3){
+   font-size: 18px;
+   width: 155px;
+   height: 56px;
+   margin: 0 auto;
+   color: #9B9A9A;
+}

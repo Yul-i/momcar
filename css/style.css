@@ -1,0 +1,245 @@
+@charset "UFT-8";
+
+/* 스프라이트 이미지 */
+/* sprite-icon */
+
+/* sns */
+
+.sp{
+    background: url(../img/momcar-sprit.svg) no-repeat;
+    display: inline-block;
+}
+
+.sp-kakao-log{
+    width: 50px; height: 50px; background-position: 0 0;}
+
+.sp-facebook{
+    width: 50px; height: 50px; background-position: -150px 0;}
+
+.sp-insta{
+    width: 50px; height: 50px; background-position: -250px 0;}
+
+.sp-kakao{
+    width: 50px; height: 50px; background-position: -300px 0;}
+
+.sp-share{
+    width: 50px; height: 50px; background-position: -350px 0;}
+
+.sp-more{
+    width: 50px; height: 50px; background-position: -400px 0;}     
+
+/* check-icon */
+
+.sp-Square{
+    width: 50px; height: 50px; background-position: 0 -50px;}     
+
+.sp-Square-checked{
+    width: 50px; height: 50px; background-position: -50px -50px;}
+
+.sp-Square-radio{
+    width: 50px; height: 50px; background-position: -100px -50px;}     
+
+.sp-circle-checked{
+    width: 50px; height: 50px; background-position: -150px -50px;}     
+            
+.sp-circle{
+    width: 50px; height: 50px; background-position: -200px -50px;}     
+
+.sp-circle-plus{
+    width: 50px; height: 50px; background-position: -250px -50px;}     
+    
+.sp-circle-minus{
+    width: 50px; height: 50px; background-position: -300px -50px;}     
+
+/* element */
+
+.sp-band{
+    width: 80px; height: 80px; background-position: 0 -100px;}
+
+.sp-thermometer{
+    width: 80px; height: 80px; background-position: -80px -100px;}
+
+.sp-siren{
+    width: 80px; height: 80px; background-position: -160px -100px;}
+
+.sp-bandage{
+    width: 80px; height: 80px; background-position: -240px -100px;}
+
+.sp-rule{
+    width: 80px; height: 80px; background-position: -320px -100px;}
+
+.sp-weighing{
+    width: 80px; height: 80px; background-position: -400px -100px;}
+
+.sp-emergency{
+    width: 80px; height: 80px; background-position: -480px -100px;}
+
+.sp-drug{
+    width: 80px; height: 80px; background-position: -0px -180px;}
+
+.sp-making{
+    width: 80px; height: 80px; background-position: -80px -180px;}
+
+.sp-red-poison{
+    width: 80px; height: 80px; background-position: -160px -180px;}
+
+.sp-blue-poison{
+    width: 80px; height: 80px; background-position: -240px -180px;}
+    
+.sp-male{
+    width: 80px; height: 80px; background-position: -320px -180px;}  
+
+.sp-famale{
+    width: 80px; height: 80px; background-position: -400px -180px;}  
+
+.sp-pin{
+    width: 80px; height: 80px; background-position: -480px -180px;}  
+
+.sp-hospital-pin{
+    width: 80px; height: 80px; background-position: -560px -180px;}  
+
+.sp-baby{
+    width: 80px; height: 80px; background-position: -0px -260px;}
+
+.sp-board{
+    width: 80px; height: 80px; background-position: -80px -260px;}
+
+.sp-pink-heart{
+    width: 80px; height: 80px; background-position: -160px -260px;}
+
+.sp-cross{
+    width: 80px; height: 80px; background-position: -240px -260px;}
+    
+.sp-latter{
+    width: 80px; height: 80px; background-position: -320px -260px;}  
+
+.sp-ball{
+    width: 80px; height: 80px; background-position: -400px -260px;}  
+
+.sp-signal{
+    width: 80px; height: 80px; background-position: -480px -260px;}  
+
+.sp-red-heart{
+    width: 80px; height: 80px; background-position: -560px -260px;}  
+
+.sp-live{
+    width: 50px; height: 50px; background-position: 0px -340px;}
+    
+.sp-live-hover{
+    width: 50px; height: 50px; background-position: -50px -340px;}  
+
+.sp-progress-ball{
+    width: 50px; height: 50px; background-position: -100px -340px;}  
+
+.sp-square-cross{
+    width: 50px; height: 50px; background-position: -150px -340px;}  
+
+.sp-circle-cross{
+    width: 50px; height: 50px; background-position: -205px -340px;}  
+
+    
+/* header */
+    header{
+        z-index: 100;
+        position: relative;
+        height: 66px; 
+        background: url(../img/header-bgbg.png) no-repeat;
+        background-size: 100% 100%;
+    }
+    #header-btn{
+        position: absolute;
+        left: 20px;
+        top: 20px;
+    }
+    #header-btn a{
+        display: inline-block;
+    }
+    #header-btn i{
+        color: #fff;
+        font-size: 1.3em;
+    }
+    header span{
+        position: absolute;
+        display: inline-block;
+        width: 40px; height: 40px;
+        background: url(../img/wheel.png) no-repeat;
+    }
+    header span.front-wheel{
+        bottom: -15px;
+        left: 50px;
+    }
+    header span.back-wheel{
+        bottom: -15px;
+        right: 50px;
+    }
+/* 경고창 */
+aside{
+    z-index: 1000;
+    display: none;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 320px;
+    background: #dddddd;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px 0px rgba(0,0,0,0.5);
+}
+aside.alert-page{
+    height: 150px;
+}
+aside.alert-textpage{
+    height: 100px;
+}
+aside h3{
+    margin-bottom: 0;
+    font-size: 16px;
+    text-align: center;
+}
+aside.alert-page h3{
+    padding: 30px;
+}
+aside.alert-textpage h3{
+    line-height: 100px;
+}
+aside.alert-page .btn-wrap{
+    text-align: center;
+}
+aside.alert-page .btn-wrap button{
+    height: 50px;
+    color: #fff;
+    border-radius: 8px;
+    font-size: 16px;
+}
+aside.alert-page .btn-wrap #btn-confirm{
+    width: 280px; 
+    background: #5095F6;
+
+}
+aside.alert-page .btn-wrap #btn-no, aside.alert-page .btn-wrap #btn-yes{
+    margin: 0 6px;
+    width: 130px;
+}
+aside.alert-page .btn-wrap #btn-no{
+    background: #9b9a9b;
+}
+aside.alert-page .btn-wrap #btn-yes{
+    background: #5095F6;
+}
+/* 푸터 */
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%; height: 60px;
+    background: #5095F6;
+}
+footer a{display: block;}
+#footer-btn{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+}
+#footer-btn i{
+    color: #fff;
+    font-size: 1.3em;
+}
+

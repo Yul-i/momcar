@@ -1,0 +1,40 @@
+@charset "UFT-8";
+
+body{
+    background: #5095F6;
+}
+h1{
+    width: 200px; height: 200px;
+    margin: 50px auto 15px;
+    background: url(../img/logo.png)no-repeat;
+    text-align: center;
+}
+h2 {
+    margin: auto;
+    width: 250px; height: 38px;
+    transform: scale(0.8);
+    background: url(../img/title-logo-white.png) no-repeat;
+}
+.container div{
+    position: fixed;
+    width: 300px;
+    bottom: -173px;
+}
+.container div img{width: 100%;}
+.container div img:nth-child(1){
+    margin-bottom: -45px;
+    transform: scale(0.7);
+}
+.container div img:nth-child(2){
+    animation: bingle 7.5s linear none infinite;
+}
+
+
+@keyframes bingle{
+    from{
+        transform: rotate(360deg);
+    }
+    to{
+        transform: rotate(0deg);
+    }
+}

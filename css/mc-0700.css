@@ -1,0 +1,48 @@
+header{
+    position: relative;
+    height: 66px; 
+    background: url(../img/header-bg4.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+
+.container{}
+
+.container p{
+    margin: 70px;
+    font-size: 18px;
+    text-align: center;
+}
+
+
+.select-box{
+    max-width: 300px;
+    margin: auto;
+}
+
+.select-box li{
+    float: left;
+    width: 40%;
+    margin-left: 25px;
+    text-align: center;
+}
+
+.select-box li i{
+    margin-top: 7px;
+}
+
+.select-box li .box-bg{
+    width: 100px; height: 100px;
+    background: #dddddd;
+}
+.select-box li .box-bg2{
+    width: 100px; height: 100px;
+    background: #dddddd;
+    /* border: 3px solid #58e3b5; */
+}
+
+
+h2{
+    background: #58e3b5;
+}
+

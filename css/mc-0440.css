@@ -1,0 +1,52 @@
+@charset "UFT-8";
+header h2 span{
+    position: inherit;
+    display: inline-block;
+    margin: 0 2px;
+    width: 20px; height: 4px;
+    background: #ffffff;
+    border-radius: 2px;
+    box-sizing: border-box;
+}
+
+header h2 span.active{
+    background: #5095F6;
+    border: 1px solid #ffffff;
+}
+
+#map{
+    margin-top: -13px;
+}
+
+table input[type=text]{
+    width: 230px;
+}
+table td span.bigdot{
+    display: block;
+    margin: 10px 0;
+    width: 14px; height: 14px;
+    border-radius: 50%;
+    background: #5095F6;
+}
+table td span.smalldot{
+    display: block;
+    margin: 10px 3px;
+    width: 8px; height: 8px;
+    border-radius: 50%;
+    background: #616161;
+}
+#address-search, #address-depature-search{
+    margin-bottom: 0;
+}
+#address-list, #address-depature-list{
+    display: none;
+    float: right;
+    margin-top: -3px;
+    width: 228px;
+    border: 1px solid #5095F6;
+    border-radius: 6px;
+}
+#address-list li, #address-depature-list li{
+    font-size:12px; color:#9B9A9A; font-weight: 300;
+    border-bottom: 1px solid #82b6ff;
+}

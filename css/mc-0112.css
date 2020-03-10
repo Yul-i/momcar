@@ -1,0 +1,14 @@
+@charset "UFT-8";
+
+span{
+    display: block;
+}
+img{
+    margin:30px 0 0 40px;
+}
+h4{
+    margin: 20px 40px;
+}
+p{
+    margin-left: 40px;
+}

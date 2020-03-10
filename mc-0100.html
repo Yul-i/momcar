@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0100.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script>  
+        $(function() {
+ 
+            // 경고창(확인)
+            $('#btn-login-kakao').click(function() {
+                $('aside.alert-page').show();
+            })
+            // 닫기는 momcar.js
+
+            $('#btn-login').click(function(e) {
+                e.preventDefault();
+                // 아무것도 없을때 입력하라 경고창 주기
+                if ($('input.id-text').val()=='') {
+                    $('.alert-textpage h3').text('아이디를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.id-text').focus();
+                    return false;
+                }
+                else if ($('input.pass-text').val()=='') {
+                    $('.alert-textpage h3').text('비밀번호를 입력해주세요.')
+                    $('.alert-textpage').show();
+                    $('.alert-textpage').delay(250).fadeOut();
+                    $('input.pass-text').focus();
+                    return false;
+                }
+                else{
+                    location.href='mc-0300.html';
+                    return true;
+                }
+            });
+        });
+        </script>
+        <!-- 추후 추가할 것
+            1.아이디 저장을 체크 시, 저장소에 저장 후 다음에 열면
+            값을 저장소에서 가져와서 아이디 input에 뜨게 하기
+            2.자동 로그인을 체크하면, 저장소에 체크 해놓은 후
+            다음에 로그인 시, 저장소에 저장된 값이 있는게 확인 되면
+            바로 페이지 넘어가게 하기
+            3.(회원가입을 구현 한다면)아이디, 비밀번호가 맞는지 아닌지 확인
+        -->
+</head>
+<body>
+    <!-- 본문 -->
+    <section>
+        <h2></h2>
+        <div class="dom">
+            <h3>로 그 인</h3>
+        </div>
+        <div class="container">
+            <form action="submit" id="login-form">
+                <input type="text" class="id-text" placeholder="아이디를 입력해주세요.">
+                <input type="password" class="pass-text" placeholder="비밀번호를 입력해주세요.">
+                <br>
+                <label for="save-id"><input type="checkbox" id="save-id">아이디 저장</label>
+                <label for="auto-login"><input type="checkbox">자동 로그인</label>
+                <button type="submit" id="btn-login">로 그 인</button>
+            </form>
+            <button type="button" id="btn-find-id" onclick="location.href='mc-0101.html'";>아이디/비밀번호 찾기</button>
+            <button type="button" id="btn-login-kakao"><span class="sp sp-kakao-log"></span> 카카오계정으로 로그인</button>
+            <button type="button" id="btn-join" onclick="location.href='mc-0110.html'";>회원가입</button>
+        </div>
+    </section>
+    <!-- 경고창 메세지 -->
+    <aside class="alert-textpage">
+        <h3></h3>
+    </aside>
+    <!-- 경고창 버튼식-->
+    <aside class="alert-page">
+        <!-- 내용 넣기 -->
+        <h3>서비스 구현 예정입니다.</h3>
+        <div class="btn-wrap">
+            <button id="btn-confirm">닫기</button>
+        </div>
+    </aside>
+</body>
+
+</html>

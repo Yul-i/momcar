@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.css">
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0200.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
+    <script src="js/momcar.js"></script>
+</head>
+<body>
+    <!-- 본문 -->
+    <!-- Swiper -->
+    <section>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="container">
+                    <h2>1.병원 호출 동행 서비스</h2>
+                    <img src="img/logo.png" alt="로고">
+                    <p>육아 중인 아이가 아플 때,<br>
+                        <span>부담 없이 호출 서비스를 이용해보세요.</span><br>
+                        <span>편안하고 안전한 병원 방문을 할 수 있습니다.</span>
+                    </p>          
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                    <h2>2.내 폰 속 응급 KIT</h2>
+                    <img src="img/intro-2.png" alt="icon">
+                    <p>야간, 혹은 주말 중에 아이가 아픈데<br>
+                        <span>어디로 가야할지 몰라서 난감한 부모님께</span><br>
+                        <span>응급 병원 및 정보를 제공 해드립니다.</span>
+                    </p>          
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="container">
+                    <h2>3.우리 아이 헬스 케어</h2>
+                    <img src="img/intro-3.png" alt="icon">
+                    <p>아이 건강 관리 기능으로<br>
+                        <span>우리 아이의 성장하는 과정을 기록 할 수 있어요.</span><br>
+                        <span>우리 아이 증세 기록을 의사 선생님께 보여주세요.</span>
+                    </p>          
+                </div>
+              </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+    </section>
+  
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+    pagination: {
+        el: '.swiper-pagination',
+        dynamicBullets: true,
+        },
+    });
+    </script>
+
+    <!-- footer -->
+    <footer>
+        <a href="mc-0300.html" id="btn-next"onclick="location.href='mc-0300.html'";>
+            <h2>바로 시작하기</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+</body>
+
+</html>

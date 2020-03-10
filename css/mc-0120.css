@@ -1,0 +1,68 @@
+@charset "UFT-8";
+
+body{background: #5095F6;}
+section h2 {
+    margin: 40px auto 0;
+    width: 250px; height: 38px;
+    transform: scale(0.8);
+    background: url(../img/title-logo-white.png) no-repeat;
+}
+.dom{
+    margin: 20px auto 0;
+    width: 300px; height: 300px;
+    background: #ffffff;
+    border-radius: 50%;
+}
+.dom h3{
+    line-height: 180px;
+    text-align: center;
+    color: #585858;
+    font-size: 24px;
+    font-weight: 400;
+}
+.dom p{
+    margin-top: -58px;
+    text-align: center;
+    color: #9B9A9A;
+}
+.dom p::after{
+    content: '';
+    display: block;
+    margin: 15px auto;
+    margin-top: 15px;
+    width: 200px; height: 1px;
+    background: #5095f6;
+}
+.container{
+    margin-top: -142px;
+    height: 384px;
+    background: #ffffff;
+    text-align: center;
+}
+.container button{
+    margin-right: 1px;
+    width: 80px;
+    height: 50px;
+    color: #9B9A9A;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 200;
+}
+.password-check{
+    padding: 20px 0 30px;
+}
+.password-check span.empty-pw{
+    display: inline-block;
+    background: #ffffff;
+    width: 35px; height: 35px;
+    border: 3px solid #eeeeee;
+    border-radius: 50%;
+}
+.container button:active{
+    animation: pwclick 1s linear none;
+}
+@keyframes pwclick{
+    from{background: none; color: #9B9A9A;}
+    50%{background: #5095f6; color: #ffffff;}
+    to{background: none; color: #9B9A9A;}
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MomCar</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" sizes="192x192"  href="img/android-icon-192x192.png">
+    <!-- fontawesom, Material Icon 링크 걸려있어요. -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <!-- 기본 폰트 NotoSansKR 걸려있어요 -->
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
+    <!-- 공통 css예요 -->
+    <link rel="stylesheet" href="css/momcar.css">
+    <link rel="stylesheet" href="css/mc-0410.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min.js"></script> 
+    <!-- 공통 js예요 -->
+    <script src="js/momcar.js"></script>
+    <script src="js/mc-0410.js"></script>
+    <script>
+                    
+            /*
+                처음 생성할때,
+                먼저 로컬스트리지에 저장되어있는 예약건이 있나 확인해야함
+                있을 경우에는, for문을 돌려서 가지고 있는 array의 마지막 부터
+                생성되게 해서 해야함
+                이럴 경우, 진행단계에 있는 반복문들도
+                마지막 array안에 들어가도록 해야함
+
+                1. reserve생성 할때 기존 있나 확인해야함
+                이때 빈값은 Null임
+            */ 
+        $(function() {
+            $('#btn-next').click(function (e) { 
+            e.preventDefault();
+            var newDate=$('.datepicker-subheader').text().slice(9,26);
+            var newTime=$('.formatted-time').text();
+            console.log(newDate.length);
+            console.log(newTime);
+            var reserve=getReserve()
+
+            for(var i=0; i<reserve.length; i++){
+                if(i==reserve.length-1){
+                    reserve[i].callDate=newDate+newTime;
+                }
+            }
+            setReserve(reserve);
+            location.href="mc-0420.html"
+        });
+    });   
+    </script>
+</head>
+<body>
+     <!-- header -->
+     <header>
+        <button id="header-btn"><a href="mc-0401.html"><i class="fas fa-chevron-left"></i></a></button>
+        <!-- h2에 상단 이름 넣어주세요 -->
+        <h2><span class="active"></span class='active'><span></span><span></span><span></span><span></span><span></span></h2>
+        <span class="front-wheel"></span>
+        <span class="back-wheel"></span>
+    </header>
+    <!-- 본문 -->
+    <section>
+        <!-- <div class="container"> -->
+            <div class="app-container" ng-app="dateTimeApp" ng-controller="dateTimeCtrl as ctrl" ng-cloak>
+                <div date-picker
+                     datepicker-title="Select Date"
+                     picktime="true"
+                     pickdate="true"
+                     pickpast="false"
+                     mondayfirst="false"
+                     custom-message="You have selected"
+                     selecteddate="ctrl.selected_date"
+                     updatefn="ctrl.updateDate(newdate)">
+                
+                    <div class="datepicker"
+                         ng-class="{
+                            'am': timeframe == 'am',
+                            'pm': timeframe == 'pm',
+                            'compact': compact
+                        }">
+                        <div class="datepicker-calendar">
+                            <div class="calendar-header">
+                                <div class="goback" ng-click="moveBack()" ng-if="pickdate">
+                                    <svg width="30" height="30">
+                                        <path fill="none" stroke="#0DAD83" stroke-width="3" d="M19,6 l-9,9 l9,9"/>
+                                    </svg>
+                                </div>
+                                <div class="current-month-container">{{ currentViewDate.getFullYear() }} {{ currentMonthName() }}</div>
+                                <div class="goforward" ng-click="moveForward()" ng-if="pickdate">
+                                    <svg width="30" height="30">
+                                        <path fill="none" stroke="#0DAD83" stroke-width="3" d="M11,6 l9,9 l-9,9" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="calendar-day-header">
+                                <span ng-repeat="day in days" class="day-label">{{ day.short }}</span>
+                            </div>
+                            <div class="calendar-grid" ng-class="{false: 'no-hover'}[pickdate]">
+                                <div
+                                    ng-class="{'no-hover': !day.showday}"
+                                    ng-repeat="day in month"
+                                    class="datecontainer"
+                                    ng-style="{'margin-left': calcOffset(day, $index)}"
+                                    track by $index>
+                                    <div class="datenumber" ng-class="{'day-selected': day.selected }" ng-click="selectDate(day)">
+                                        {{ day.daydate }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="timepicker" ng-if="picktime == 'true'">
+                            <div ng-class="{'am': timeframe == 'am', 'pm': timeframe == 'pm' }">
+                                <div class="timepicker-container-outer" selectedtime="time" timetravel>
+                                    <div class="timepicker-container-inner">
+                                        <div class="timeline-container" ng-mousedown="timeSelectStart($event)" sm-touchstart="timeSelectStart($event)">
+                                            <div class="current-time">
+                                                <div class="actual-time">{{ time }}</div>
+                                            </div>
+                                            <div class="timeline">
+                                            </div>
+                                            <div class="hours-container">
+                                                <div class="hour-mark" ng-repeat="hour in getHours() track by $index"></div>
+                                            </div>
+                                        </div>
+                                        <div class="display-time">
+                                            <div class="decrement-time" ng-click="adjustTime('decrease')">
+                                                <svg width="24" height="24">
+                                                    <path stroke="white" stroke-width="2" d="M8,12 h8"/>
+                                                </svg>
+                                            </div>
+                                            <div class="time" ng-class="{'time-active': edittime.active}">
+                                                <input type="text" class="time-input" ng-model="edittime.input" ng-keydown="changeInputTime($event)" ng-focus="edittime.active = true; edittime.digits = [];" ng-blur="edittime.active = false"/>
+                                                <div class="formatted-time">{{ edittime.formatted }}</div>
+                                            </div>
+                                            <div class="increment-time" ng-click="adjustTime('increase')">
+                                                <svg width="24" height="24">
+                                                    <path stroke="white" stroke-width="2" d="M12,7 v10 M7,12 h10"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="am-pm-container">
+                                            <div class="am-pm-button" ng-click="changetime('am');">am</div>
+                                            <div class="am-pm-button" ng-click="changetime('pm');">pm</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="datepicker-header">
+                            <div class="datepicker-subheader">선택하신 날짜는 {{ localdate.getFullYear() }}년 {{ monthNames[localdate.getMonth()] }} {{ localdate.getDate() }}일 {{ selectedDay }} 입니다.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- </div>   -->
+    </section>
+    <!-- footer -->
+    <footer>
+        <a href="#" id="btn-next">
+            <h2>이용 인원 선택</h2>
+            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
+        </a>
+    </footer>
+    
+</body>
+</html>

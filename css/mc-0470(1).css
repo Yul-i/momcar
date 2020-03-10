@@ -1,0 +1,146 @@
+@charset "UFT-8";
+header{
+    z-index: 100;
+}
+section h2{
+    position: absolute;
+    left: 50%;
+    z-index: 3;
+    top: 120px;
+    transform: translateX(-50%);
+    font-size: 16px;
+}
+section p{
+    position: absolute;
+    left: 50%;
+    z-index: 3;
+    top: 160px;
+    transform: translateX(-50%);
+    color: #fff;
+}
+
+section>span{
+    width: 100%;
+    height: 180px;
+    background: rgba(100, 100, 100, 0.5);
+    display: inline-block;
+    z-index: 2;
+    position: relative;
+    margin-top: -14px;
+}
+
+.article1{
+    margin-top: -184px;
+    position: relative;
+    width: 100%;
+    height: 180px;
+    background: #f1f1f1;
+    text-align: center;
+}
+.article1::after{
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 60px;
+    width: 100%; height: 25px;
+    border-bottom: 3px dashed #dcdcdc;
+}
+.sp-pin, .sp-hospital-pin{
+    position: relative;
+    transform: scale(0.5);
+}
+.sp-pin{
+    right:70px;
+}
+.sp-pin span, .sp-hospital-pin span{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #5095F6;
+    font-size: 18px;
+}
+.sp-pin span{
+    width: 76px;
+    bottom: -26px;
+}
+.call-bar-depature, .call-bar-run{
+    z-index: 1;
+    position: relative;
+    display: inline-block;
+    top: 13px;
+    width: 14px; height: 14px;
+    background: #5095F6;
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.call-bar-depature{
+    right: 120px;
+}
+.call-bar-run{
+    right: 40px;
+}
+.sp-hospital-pin{
+    left:70px;
+}
+.sp-hospital-pin span:first-child{
+    width: 100px;
+    bottom: -20px;
+}
+.sp-hospital-pin span.arrive-time{
+    display: none;
+    bottom: -44px;
+    color: #f26755;
+}
+.sp-hospital-pin span.arrive-time.active{
+    display:block;
+}
+.call-bar{
+    position: relative;
+    overflow: hidden;
+    margin: auto;
+    width: 260px; height: 3px;
+    background: #e0e0e0;
+}
+.call-bar span{
+    position: absolute;
+}
+.call-bar .call-bar-active{
+    left: 0; top: 0;
+    width: 100px; height: 3px;
+    background: #5095F6;
+}
+.article1 ul{
+    overflow: hidden;
+    width: 300px;
+    margin: 46px auto 0;
+}
+.article1 ul li{
+    float: left;
+    margin: 0 auto;
+    width: 60px;
+    font-size: 12px;
+    color: #585858;
+}
+.article1 ul li span{
+    display: block;
+    margin: 0 auto 4px;
+    width: 30px; height: 12px;
+    background: #ffffff;
+    border-radius: 10px;
+}
+.article1 ul li span.active{
+    background: #5095F6;
+}
+
+
+
+section i{
+    font-size: 3em;
+    position: absolute;
+    top: 85px;
+    left: 50%;
+    z-index: 3;
+    color: #fff;
+    transform: translateX(-50%);
+}
