@@ -12,7 +12,7 @@
 ### 3)제작 과정 및 포트폴리오
 * [앱_프로젝트_기획서.pdf](https://drive.google.com/file/d/1DUAR_wdPewBaR2HMg-ngR0_FzZfgq5xg/view?usp=sharing "맘카프로젝트기획서")
 * [화면설계서.pdf](https://drive.google.com/file/d/1nH70tYnk5Kowg_FvHMNoxPVsHc3rC_pC/view "맘카화면설계서")
-* [네비게이션_IA.pdf](https://drive.google.com/file/d/1ENaKGwUWfsJom7v5mfKCwocG2iK6-0lb/view "네비게이션IA"/)
+* [네비게이션_IA.pdf](https://drive.google.com/file/d/1ENaKGwUWfsJom7v5mfKCwocG2iK6-0lb/view "네비게이션IA")
 * 스타일가이드 : 하단 7)StyleGuide 참조
 ---
 ### 4)사용된 기술
