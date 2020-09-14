@@ -14,48 +14,31 @@
     <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR:100,300,400,500,700,900&display=swap&subset=korean" rel="stylesheet">
     <!-- 공통 css예요 -->
     <link rel="stylesheet" href="css/momcar.css">
-    <!-- 여기에 페이지 css 따로 넣어주세요. -->
+    <link rel="stylesheet" href="css/mc-0000.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <!-- 공통 js예요 -->
     <script src="js/momcar.js"></script>
-    <!-- 여기에 페이지 js 따로 넣어주세요. 없으면 넣지마세요. -->
-</head>
-<body>
-     <!-- header -->
-     <header>
-        <button id="header-btn"><a href="#"><i class="fas fa-chevron-left"></i></a></button>
-        <!-- h2에 상단 이름 넣어주세요 -->
-        <h2></h2>
-        <span class="front-wheel"></span>
-        <span class="back-wheel"></span>
-    </header>
-    <!-- 본문 -->
+    <script>
+        function window_onload(){
+            setTimeout('go_url()',3000)  // 3초후 go_url() 함수를 호출한다.
+        }
+        function go_url(){
+            location.href="mc-0100.html"  // 페이지 이동
+        }
+    </script>
+</head>  
+<body onload="window_onload()">
     <section>
-        <div class="container"> 
-
+        <div class="container">
+            <h1></h1>
+            <h2></h2>
+            <div>
+                <img src="img/intro-clouds.PNG" alt="구름">
+                <img src="img/intro-hill.PNG" alt="언덕">
+            </div>
+            
         </div>
     </section>
-    <!-- 경고창 버튼식-->
-    <aside class="alert-page">
-        <!-- 내용 넣기 -->
-        <h3>서비스 구현 예정입니다.</h3>
-        <div class="btn-wrap">
-            <button id="btn-confirm">닫기</button>
-            <button id="btn-yes">확인</button>
-            <button id="btn-no">취소</button>
-        </div>
-    </aside>
-    <!-- 경고창 메세지 -->
-    <aside class="alert-textpage">
-        <h3>서비스 구현 예정입니다.</h3>
-    </aside>
-    <!-- footer -->
-    <footer>
-        <a href="#">
-            <h2></h2>
-            <button id="footer-btn"><i class="fas fa-chevron-right"></i></button>
-        </a>
-    </footer>
-    
 </body>
-</html> 
+
+</html>
